@@ -3,22 +3,7 @@ layout: default
 ---
 <div class="col-sm-12">
     <div class="page">
-        {% for post in site.posts %}
-            {% if post.archive == false %}
-            <div class="page-item">
-                <div class="col-sm-8">
-                    <ul class="page-item-title">
-                        <li><time class="timeago meta" datetime="{{ post.date |  date: "%A %-d %B %Y" }}">{{ post.date }}</time>
-                        <a class="meta pull-right comments-meta" href="{{ post.url | prepend: site.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
-                        <li><a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-12 page-item-body">
-                    {{post.excerpt}}
-                </div>
-            </div>
-            {% endif %}
-        {% endfor %}
+        <p>I am a master student of computer science in University of Helsinki, Finland.</p>
     </div>
 </div>
 <script>
