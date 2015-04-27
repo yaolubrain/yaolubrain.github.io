@@ -4,14 +4,13 @@ layout: default
 <div class="col-sm-12">
     <div class="page">
         {% for post in site.posts %}
-            {% if post.archive == false %}
+            {% if post.category == project %}
                 <div class="page-title">
                	     {{ post.title }}
                 </div>
 		<div class="page-content">
    	             {{ post.content }}
                 </div>
-
             {% endif %}
         {% endfor %}
     </div>
