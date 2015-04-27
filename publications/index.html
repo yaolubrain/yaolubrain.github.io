@@ -3,11 +3,16 @@ layout: default
 ---
 <div class="col-sm-12">
     <div class="page">
-        <article>
-        {% for paper in site.publications %}
-	    <h2>{{ paper.title }}</h2>
-	    {{ paper.content }}
+        {% for post in site.posts %}
+            {% if post.archive == false %}
+                <div class="page-title">
+               	     {{ post.title }}
+                </div>
+		<div class="page-content">
+   	             {{ post.content }}
+                </div>
+
+            {% endif %}
         {% endfor %}
-	</article>
     </div>
 </div>
