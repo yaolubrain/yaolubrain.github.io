@@ -3,6 +3,7 @@ layout: post
 title: Traveling bumps and their collisions in two-dimensional neural field
 date: 2014-03-27
 comments: true
+category: publication
 archive: false
 ---
 
