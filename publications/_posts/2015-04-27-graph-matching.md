@@ -9,3 +9,5 @@ archive: false
 Yao Lu, Kaizhu Huang, Cheng-Lin Liu
 
 arXiv (2012)
+
+<p><img src="{{ "/assets/images/graph_matching.png" | prepend: site.url }}" align="left" width="200px"></p>
