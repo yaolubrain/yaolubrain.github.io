@@ -6,8 +6,9 @@ comments: true
 category: publication
 archive: false
 ---
-Yao Lu, Kaizhu Huang, Cheng-Lin Liu
-
+<p>Yao Lu, Kaizhu Huang, Cheng-Lin Liu
+<br>
 arXiv (2012)
+</p>
 
 <p><img src="{{ "/assets/images/graph_matching.png" | prepend: site.url }}" align="left" width="200px"></p>

@@ -7,8 +7,9 @@ category: publication
 archive: false
 ---
 
-Yao Lu, Yuzuru Sato, Shun-ichi Amari
-
+<p>Yao Lu, Yuzuru Sato, Shun-ichi Amari
+<br>
 Neural Computation (2011)
+</p>
 
 <p><img src="{{ "/assets/images/traveling_bumps.png" | prepend: site.url }}" align="left" width="200px"></p>
