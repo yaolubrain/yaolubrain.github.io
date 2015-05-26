@@ -123,8 +123,8 @@ main {position: relative;}
   padding: 0;
   position: relative;
   .container {
-    max-width: 800px!important;
-    padding: 75px 0 60px;
+    max-width: 1200px!important;
+    padding: 10px 0 60px;
   }
   #body {
     min-height: 600px;
@@ -171,37 +171,7 @@ main {position: relative;}
 // Miscellenous
 ul {list-style-type: square;}
 
-// Twitter timeline
-.twitter-timeline {width: 100% !important;}
-
-.tweet-block {
-  margin-top: 70px;
-  .text-block { 
-    background-color: #fff !important;
-    margin: 10px 0;     
-  }
-}
-
 // Extra modules
-.statusbar {
-  top: 0;
-  position: fixed;
-  background-color: #eb5e29;
-  height: 2px;
-  z-index: 20;
-}
-
-.goto-top {
-  display: none;
-  font-size: 15px !important;
-  cursor: pointer;
-  margin: 1px 0;
-  background: $primary-color;
-  i {color: #333;}
-  &:hover,
-  &:focus,
-  &:hover i {color: red;}
-}
 
 .link {
   color: $lnk-color;
@@ -212,12 +182,6 @@ ul {list-style-type: square;}
     color: $lnk-highlight-color;
   }
 }
-
-#twitter-ic {color: #55acee !important;}
-
-#git-ic {color: #333 !important;}
-
-#rss-ic {color: #ff9933 !important;}
 
 .top {
   line-height: 40px;
@@ -333,7 +297,7 @@ pre {
 
   .menu-btn,.close-btn {
     position: absolute;
-    top: 0.4em;
+    top: 0.1em;
     left: 1.875em;
     display: block;
     width: 2.625em;
@@ -389,17 +353,17 @@ pre {
   .row-offcanvas-left .sidebar-offcanvas {
     position: absolute;
     top:0;
-    left: -70%;
+    left: -50%;
   }
   
   .row-offcanvas-left.active {
-    left: 70%;
+    left: 50%;
   }
   
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    width: 70% !important;
+    width: 90% !important;
   }
 
   .meta li {display: inline;}

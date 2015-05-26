@@ -1,19 +1,8 @@
 {% include head.html %}
-<main>
-    <h1 style="margin-left: 265px; margin-bottom:0px; font-weight: bold;">Yao Lu</h1>
-    <div id="wrap">
-        <div id="body" class="container">
-            <div class="row row-offcanvas row-offcanvas-left">
-                <nav id="nav" role="navigation" class="col-sm-2 sidebar-offcanvas">
-                    {% include sidenav.html %}                    
-                </nav>
-                <div class="col-sm-10">
-                    <div class="row">
-                        {{ content }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
+
+<div id="wrapper">
+    {% include sidenav.html %}
+    {{ content }}
+</div>    
+
 {% include footer.html %}
