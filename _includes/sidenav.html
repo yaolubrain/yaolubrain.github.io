@@ -12,25 +12,25 @@
             </div>
             <ul id="navigation">
                 <li>
-                    <a href="index.html">
+                    <a href="{{ "" | prepend: site.url }}">
                         <div class="icon icon-user"></div>
                         <div class="text">About Me</div>
                     </a>
                 </li>
                 <li>
-                    <a href="publications/">
+                    <a href="{{ "/publications/" | prepend: site.url }}">
                         <div class="icon icon-book"></div>
                         <div class="text">Publications</div>
                     </a>
                 </li>
                 <li>
-                    <a href="projects">
+                    <a href="{{ "/projects/" | prepend: site.url }}">
                         <div class="icon icon-rocket"></div>
                         <div class="text">Projects</div>
                     </a>
                 </li>
                 <li>
-                    <a href="blog">
+                    <a href="{{ "/blog/" | prepend: site.url }}">
                         <div class="icon icon-edit"></div>
                         <div class="text">Blog</div>
                     </a>
