@@ -3,15 +3,9 @@ layout: default
 ---
 <div class="col-sm-12">
     <div class="page">
-        {% for post in site.posts %}
-            {% if post.categories contains "publication" %}
-                <div class="publication-title">
-               	     {{ post.title }}
-                </div>
-		<div class="publication-content">
-   	             {{ post.content }}
-                </div>
-            {% endif %}
-        {% endfor %}
+        <p>I am a master student of computer science in University of Helsinki, Finland.</p>
+        <p>Research Interests: Unsupervised Learning. Deep Neural Networks. Computer Vision.</p>
+	<br>
+	<p><img src="{{ "/assets/images/email.png" | prepend: site.url }}" align="right" width="200px"></p>
     </div>
 </div>
