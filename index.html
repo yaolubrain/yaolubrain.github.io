@@ -1,6 +1,57 @@
 ---
 layout: default
 ---
+<a href="#sidebar" class="mobilemenu"><i class="icon-reorder"></i></a>
+<!-- Side Bar (Left) -->
+<div id="sidebar"> 
+    <div id="main-nav">
+        <div id="nav-container">
+            <div id="profile" class="clearfix">
+                <div class="portrate hidden-xs"></div>
+                <div class="title">
+                    <h2>Yao Lu</h2>
+                    <h3>University of Helsinki</h3>
+                    <h3>yaolubrain@gmail.com</h3>
+                </div>                            
+            </div>
+            <ul id="navigation">
+                <li class="currentmenu">
+                    <a href="{{ "" | prepend: site.url }}">
+                        <div class="icon icon-user"></div>
+                        <div class="text">About Me</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ "/publications/" | prepend: site.url }}">
+                        <div class="icon icon-book"></div>
+                        <div class="text">Publications</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ "/projects/" | prepend: site.url }}">
+                        <div class="icon icon-rocket"></div>
+                        <div class="text">Projects</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ "/blog/" | prepend: site.url }}">
+                        <div class="icon icon-edit"></div>
+                        <div class="text">Blog</div>
+                    </a>
+                </li>
+            </ul>
+        </div>        
+    </div>
+            
+    <div class="social-icons">
+        <ul>
+            <li><a href="https://www.facebook.com/yao.lu.9883"><i class="icon-facebook"></i></a></li>
+            <li><a href="http://www.weibo.com/yaolubrain"><i class="icon-weibo"></i></a></li>
+            <li><a href="https://github.com/yaolubrain"><i class="icon-github"></i></a></li>
+        </ul>
+    </div>    
+</div>
+
 <div id="main">
     <div id="biography" class="page home" data-pos="home">
     <div class="pageheader">
