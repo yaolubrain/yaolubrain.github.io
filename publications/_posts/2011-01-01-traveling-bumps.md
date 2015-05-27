@@ -11,5 +11,5 @@ archive: false
 
 <p>
 	<img src="{{ "/img/traveling_bumps.png" | prepend: site.url }}" align="left" width="200px">
-	In a set of two-dimensional neural network equations, we found a unique traveling bump solution, which was unknown to exist before.
+	We found a unique traveling bump solution, which was unknown to exist before, in a set of two-dimensional neural network equations, 
 </p>
