@@ -26,13 +26,13 @@ ul.timeline li .data {
 	background: #03cc85;
 }
 .pitems .pubmain .pubassets {
-	border-top-color:#03cc85; 
+	border-top-color:#1E90FF; 
 }
 .pitems .pubmain .pubassets a:hover,.pitems .pubmain .pubassets a:focus,.pitems .pubmain .pubassets a.pubcollapse {
-	background: #03cc85;
+	background: #1E90FF;
 }
 .contact-office .icon-huge, .contact-lab .icon-huge {
-	color: #03cc85;
+	color: #1E90FF;
 }
 
 /* socpndary color 
