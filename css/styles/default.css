@@ -45,10 +45,10 @@ ul.ul-dates div.dates span:last-child {
 	background-color: #03bb7a;
 }
 ul.timeline li.open .circle {
-	background-color: #1E90FF;
+	background-color: #7B68EE;
 }
 ul.timeline li.open .data {
-	border-color: #1E90FF;
+	border-color: #7B68EE;
 }
 #labp-heads-wrap {
 	background-color: #03bb7a;
