@@ -60,3 +60,50 @@ layout: default
 	<p><img src="{{ "/assets/images/email.png" | prepend: site.url }}" align="right" width="200px"></p>
     </div>
 </div>
+
+<div id="main">
+    <div id="publications" class="page">
+        <div class="page-container">
+            <div class="pagecontents">        
+                <!-- Paper List Body -->
+                <div class="section color-2" id="pub-grid">
+                    <div class="section-container">                    
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="pitems">
+                                    
+                                    {% for post in site.posts %}
+                                        {% if post.categories contains "project" %}
+                                                                                
+                                            <div class="item mix other">
+                                                <div class="pubmain">
+                                                    <!-- download & expand buttons -->
+                                                    <div class="pubassets">
+                                                        <a href="{{ post.link }}" class="tooltips" title="Download" target="_blank">
+                                                            <i class="icon-cloud-download"></i>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- paper info -->
+                                                    <h4 class="pubtitle">{{ post.title }}</h4>
+                                                    <div class="pubauthor">{{ post.author }}</div>
+                                                    <div class="pubcite">{{ post.details }}</div>                                        
+                                                </div>
+
+                                                <!-- paper details -->
+                                                <div class="pubdetails">                                            
+                                                    {{ post.content }}
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}            
+                                    
+                                </div>
+                            </div>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>        
