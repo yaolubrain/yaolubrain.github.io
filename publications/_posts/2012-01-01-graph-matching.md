@@ -5,6 +5,7 @@ author: <strong>Yao Lu</strong>, Kaizhu Huang, Cheng-Lin Liu
 details: arXiv, 2012.
 comments: true
 category: publication
+link: http://arxiv.org/abs/1207.1114
 archive: false
 ---
 

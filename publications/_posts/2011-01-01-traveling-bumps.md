@@ -6,6 +6,7 @@ date: 2011-05-01
 details: Neural Computation, 2011.
 comments: true
 category: publication
+link: http://www.mitpressjournals.org/doi/abs/10.1162/NECO_a_00111?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%3dpubmed#.VXGbS62lyko
 archive: false
 ---
 
