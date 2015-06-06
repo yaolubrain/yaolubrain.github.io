@@ -90,9 +90,11 @@ layout: default
                                                     <div class="pubcite">{{ post.details }}</div>                                        
                                                 </div>
 
-                                                <div class="pubdetails">                                            
-                                                    {{ post.content }}
-                                                </div>
+						{% if post.summary == true %}
+	                                                <div class="pubdetails">                                            
+        	                                            {{ post.content }}
+                	                                </div>
+						{% endif %}
 
                                             </div>
                                         {% endif %}

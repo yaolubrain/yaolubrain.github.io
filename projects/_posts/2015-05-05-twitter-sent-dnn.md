@@ -7,6 +7,7 @@ comments: true
 category: project
 link: https://github.com/xiaohan2012/twitter-sent-dnn
 archive: false
+summary: true
 ---
 
 <p>

@@ -2,12 +2,13 @@
 layout: post
 title: The Great Beijing Cleanweb Hackathon 
 author: <strong>Yao Lu</strong> and others
-date: 2014-01-17
+date: 2013-07-25
 details: Our team won the first place.
 comments: true
 category: project
 link: http://beijingenergynetwork.com/events/archived-events/cleanweb-hackathon/
 archive: false
+summary: true
 ---
 
 <p>
