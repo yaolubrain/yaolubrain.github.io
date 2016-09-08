@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Slate is a responsive theme for GitHub Pages" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+
+    <title>DOSNES</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/yaolubrain/DOSNES">View on GitHub</a>
+
+          <h1 id="project_title">DOSNES</h1>
+          <h2 id="project_tagline">Doubly Stochastic Neighbor Embedding on Spheres</h2>
+        </header>
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+        <p>DOSNES is a new interactive method to visualize your data.</p> 
+        <div class="figure_intro">
+        <figure>
+        <a href="img/nips_dosnes_c.png">        
+          <img height="250" width="250" src="img/nips_dosnes_c.png">
+        </a>  
+        <a href="img/curet_dosnes_c.png">                
+          <img height="250" width="250" src="img/curet_dosnes_c.png">
+        </a>  
+        <a href="img/mnist_dosnes_c.png">                
+          <img height="250" width="250" src="img/mnist_dosnes_c.png">
+        </a>          
+        </figure>
+        </div>
+
+        <p> It is based on <a href="https://lvdmaaten.github.io/tsne/">t-SNE</a> with two improvements:</p>
+        <ul>
+          <li>Doubly stochastic normalization</li>
+          <li>Spherical embedding</li>
+        </ul>
+        <h2>Why Doubly Stochastic Normalization?</h2>
+        t-SNE is the state-of-the-art method for data visualization. However, when the similarity graph in t-SNE has highly non-uniform distribution of node degrees, t-SNE might have an undesirable effect: the nodes of high degree are crowed in the center. For example, in a co-author graph (NIPS), some authors like Michael Jordan have lots of papers while most people only have a few. As a result, although productive authors such as Hinton and Scholkopf have never co-authored a paper, they are close in the plot.
+        <div class="figure_nips">
+          <figure>        
+            <a href="img/nips28_tsne.png">
+              <img height="350" width="350" src="img/nips28_tsne.png">    
+            </a>
+            <figcaption>
+              2D t-SNE
+            </figcaption>
+          </figure>  
+          <figure>                
+            <a href="img/nips28_tsne3d.png">          
+              <img height="350" width="350" src="img/nips28_tsne3d.png">   
+            </a>              
+            <figcaption>
+              3D t-SNE
+            </figcaption>
+          </figure>
+        </div>
+        <p>For another example, in a world trade dataset, some countries like USA and China have much more total imports/exports than many others. In t-SNE, these countries are crowded in the center.</p>
+        <div class="figure_nips">       
+        <figure>        
+          <a href="img/worldtrade_tsne.png">                  
+            <img height="350" width="350" src="img/worldtrade_tsne.png">    
+          </a>
+          <figcaption>          
+            2D t-SNE
+          </figcaption>
+        </figure>  
+        <figure> 
+          <a href="img/worldtrade_tsne3d.png">                                         
+            <img height="350" width="350" src="img/worldtrade_tsne3d.png">    
+          </a>          
+          <figcaption>
+            3D t-SNE
+          </figcaption>
+        </figure>
+        </div>            
+
+        A solution here is to apply doubly stochastic normalization to the similarity graph such that all node have the same degree. Please see our paper below for the details of doubly stochastic normalization.
+      <h2>Why Spherical Embedding?</h2>
+      <ul>
+        <li>Doubly stochastic matrices and spheres have a close mathematical relationship. Roughly speaking, a doubly stochastic similarity matrix is likely to induce data embedded on spheres. Please see our paper below for the proofs.</li>
+        <li>A sphere has no center or boundary on its surface. Thus, it eliminates the center and boundary effects.</li>
+        <li>Some data are more natural to embed on spheres such as geography data.</li>
+        <li>Data visualization on <a href="https://www.youtube.com/watch?v=1aRQdiyNGGM">spherical screens</a>.</li>
+      </ul>
+
+      <h2>Demo</h2>
+      <p>Open with <b>Firefox</b>. Don't use Chrome.</p>
+      <div class="figure_demo">
+        <figure>
+        <img height="200" width="200" src="img/nips_hinton.png">
+        <figcaption>
+          NIPS
+        </figcaption>
+        </figure>
+         <figure>
+        <img height="200" width="200" src="img/worldtrade_dosnes_2.png">
+        <figcaption>
+          WorldTrade
+        </figcaption>
+        </figure>
+         <figure>
+        <img height="200" width="200" src="img/mirex07_dosnes_1.png">
+        <figcaption>
+          MIREX 07
+        </figcaption>
+        </figure>
+        <figure>
+        <img height="200" width="200" src="img/mnist_dosnes1.png">
+        <figcaption>
+          MNIST
+        </figcaption>
+        </figure>          
+        <figure>
+        <img height="200" width="200" src="img/coil100_dosnes.png">
+        <figcaption>
+          COIL 100
+        </figcaption>
+        </figure>
+         <figure>
+        <img height="200" width="200" src="img/curet_dosnes.png">
+        <figcaption>
+          CURET
+        </figcaption>
+        </figure>
+      
+      </div>  
+
+        
+        
+
+      <h2>Paper</h2>
+      <a href="#">Doubly Stochastic Neighbor Embedding on Spheres</a>
+      <p>Yao Lu*, Zhirong Yang*, Jukka Corander <br>(*equal contribution)</p>
+
+      <h2>Questions</h2>
+      If you have any question, feel free to contact us (yaolubrain@gmail.com). We would like to hear from you!
+      
+
+      <footer>
+        <span>&copy; 2016 Yao Lu
+      </footer>
+
+      
+  </body>
+</html>
