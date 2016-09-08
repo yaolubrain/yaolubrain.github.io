@@ -133,6 +133,13 @@ p img {
     text-align: center;
 }
 
+.figure_earth {
+    height: 270;
+    padding: 0px;      
+    vertical-align: middle; 
+    text-align: center;
+}
+
 .figure_nips {
     height: 400px;
     padding: 0px;      
