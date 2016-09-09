@@ -19,7 +19,7 @@ Theme Styles
 body {
   color:#373737;
   background: #212121;
-  font-size: 18px;
+  font-size: 20px;
   font-family: Latin Modern Sans;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -75,7 +75,7 @@ h6 {
 
 p {
   font-family: Latin Modern Sans;
-  font-size: 18px;
+  font-size: 20px;
   margin: 0px 0 15px 0;
 }
 
