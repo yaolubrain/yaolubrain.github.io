@@ -126,39 +126,15 @@ p img {
   border: none;
 }
 
-.figure_intro {
-    height: 280px;
-    padding: 0px;      
-    vertical-align: middle; 
-    text-align: center;
-}
-
-.figure_earth {
-    height: 270;
-    padding: 0px;      
-    vertical-align: middle; 
-    text-align: center;
-}
-
-.figure_nips {
-    height: 400px;
-    padding: 0px;      
-    margin: 20px;
-    vertical-align: middle; 
-    text-align: center;
-}
-
-.figure_demo {
-    height: 500px;
-    padding: 0px;      
-    vertical-align: middle; 
-    text-align: center;
-}
 
 figure {
     display: inline-block;
     margin: 0px; /* adjust as needed */
+    text-align: center;    
 }
+
+
+
 figure img {
     vertical-align: top;
 }
