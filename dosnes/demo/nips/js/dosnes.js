@@ -248,7 +248,7 @@ function onDocumentMouseOut( event ) {
 
 function onDocumentMouseWheel( event ) {      
     var d = ((typeof event.wheelDelta != "undefined") ? (-event.wheelDelta) : event.detail);
-    camera.position.z += 0.02*d;       
+    camera.position.z += 0.005*d;       
 
     if (camera.position.z < 1.1) {
         camera.position.z = 1.1;
