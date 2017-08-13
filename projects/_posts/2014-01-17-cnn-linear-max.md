@@ -7,7 +7,7 @@ comments: true
 category: project
 link: https://github.com/yaolubrain/cnn_linear_max
 archive: false
-summary: false
+summary: true
 ---
 
 <p>
