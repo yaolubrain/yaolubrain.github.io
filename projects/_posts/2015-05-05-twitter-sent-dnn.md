@@ -11,5 +11,6 @@ summary: true
 ---
 
 <p>
-We made an app with can predict the sentiment of a tweet based on ConvNet in Python.
+We made an app with can predict the sentiment of a tweet based on ConvNet in Python.<br>
+<a href="https://github.com/xiaohan2012/twitter-sent-dnn">[code]</a>
 </p>

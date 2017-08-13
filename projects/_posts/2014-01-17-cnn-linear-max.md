@@ -9,3 +9,7 @@ link: https://github.com/yaolubrain/cnn_linear_max
 archive: false
 summary: false
 ---
+
+<p>
+<a href="https://github.com/yaolubrain/cnn_linear_max">[code]</a>
+</p>
