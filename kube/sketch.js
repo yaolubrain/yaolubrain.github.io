@@ -49,7 +49,7 @@ function setup() {
 
 function draw() {
   background(255);
-  translate(window.innerWidth/2, window.innerHeight/2);
+  translate(displayWidth/2, displayHeight/2);
 
   points.forEach(p => p.rotate().project().display());
 
