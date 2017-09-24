@@ -35,7 +35,7 @@ function drawLine(p1, p2) {
 }
 
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(window.innerWidth, window.innerHeight);
   points.push(new Point(-10, -10, 10));
   points.push(new Point( 10, -10, 10));
   points.push(new Point( 10,  10, 10));
@@ -49,7 +49,7 @@ function setup() {
 
 function draw() {
   background(255);
-  translate(displayWidth/2, displayHeight/2);
+  translate(width/2, height/2);
 
   points.forEach(p => p.rotate().project().display());
 
