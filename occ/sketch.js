@@ -63,7 +63,7 @@ function setup() {
 
   for (let x = -800; x < 2000; x+=400) {
     let square_array = [];
-    let speed = Math.random() - 0.5;
+    let speed = (Math.random() ) * 5;
     for (let i = 0; i < 50; ++i) {
       square_array.push(new Square(x+i*30, window.innerHeight-i*30, speed));
     }
