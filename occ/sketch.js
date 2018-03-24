@@ -1,73 +1,102 @@
-class Diamond {
-  constructor(x, y, c) {
+class Square {
+  constructor(x, y, speed) {
     this.x = x;
     this.y = y;
-    this.c = c;
+    this.speed = speed;
+    this.size = 100;
+  }
+
+  move() {
+    this.x += this.speed;
+    this.y += -this.speed;
+    return this;
+  }
+
+  isInside() {
+    return this.x >= 0 & this.x <= displayWidth & this.y >= 0 & this.y <= displayHeight;
+  }
+}
+
+class Stripe {
+  constructor(square_array, speed) {
+    this.square_array = square_array;
+    this.speed = speed;
+  }
+
+  push(square) {
+    this.square_array.push(square);
   }
 
   display() {
-    fill(this.c);
-    push();
-//    rotate(PI / 4);
-    rect(this.x, this.y, 100, 100);
-    pop();
-    return this;
-  }
-
-  rebirth() {
-    if (this.x < -200) {
-      this.x = displayWidth + this.x + 200;
-    } else if (this.x > displayWidth) {
-      this.x = this.x - displayWidth;
-    }
-
-    if (this.y < -200) {
-      this.y = displayHeight + this.y + 200;
-    } else if (this.y > displayHeight) {
-      this.y = this.y - displayHeight;
+    for (let i = this.square_array.length - 1; i >= 0; --i) {
+      let square = this.square_array[i];
+      fill(0.25*square.y + 1);
+      rect(square.x, square.y, square.size, square.size);
     }
     return this;
   }
 
+  move() {
+    for (let i = 0; i < this.square_array.length; ++i) {
+      let square = this.square_array[i];
+      square.x += this.speed;
+      square.y += -this.speed;
+    }
+    return this;
+  }
+
+  remove() {
+    this.square_array = this.square_array.filter(dot => dot.isInside());
+    return this;
+  }
+
+  create() {
+    this.square_array = createSquares(this.square_array, 50);
+    return this;
+  }
 }
 
-let points = [];
 let layers = [];
-
-function drawLine(p1, p2) {
-  stroke(0);
-  line(p1.x_proj, p1.y_proj, p2.x_proj, p2.y_proj);
-}
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
 
-  for (let i = 0; i < 20; ++i) {
-    let diamonds = [];
-    for (let x = 0; x < displayWidth; x+=400) {
-      for (let y = 0; y < displayHeight; y+=400) {
-        diamonds.push(new Diamond(x+i*30, y+i*30, (i+2)*10));
-      }
+  for (let x = -800; x < 2000; x+=400) {
+    let square_array = [];
+    let speed = Math.random() - 0.5;
+    for (let i = 0; i < 50; ++i) {
+      square_array.push(new Square(x+i*30, window.innerHeight-i*30, speed));
     }
 
-    layers.push(diamonds)
+    let stripe = new Stripe(square_array, speed);
+    layers.push(stripe)
   }
+}
+
+function createSquares(diamonds, num) {
+  
+  while(diamonds.length < num) {
+    let l = diamonds.length;
+    let x = diamonds[l-1].x;
+    let y = diamonds[l-1].y;
+    let diamond = new Square(x + 30 , y - 30 , 1);
+    diamonds.push(diamond);
+
+    x = diamonds[0].x;
+    y = diamonds[0].y;
+    diamond = new Square(x - 30 , y + 30 , 1);
+    diamonds.unshift(diamond);
+  }
+  return diamonds;
 }
 
 
 function draw() {
   background(0);
-//  translate(width/2, height/2);
   noStroke();
 
   for (let i = 0; i < layers.length; ++i) {
-    let diamonds = layers[i];
-    for (let j = 0; j < diamonds.length; j++) {
-      diamonds[j].x += -(i + 1)/2;
-      diamonds[j].y += -(i + 1)/2;
-      diamonds[j].rebirth();
-      diamonds[j].display();
-    }
+    let stripe = layers[i];
+    stripe.display().move().remove().create();
   }
-
 }
