@@ -3,7 +3,7 @@ class Square {
     this.x = x;
     this.y = y;
     this.speed = speed;
-    this.size = 100;
+    this.size = 50;
   }
 
   move() {
@@ -51,6 +51,7 @@ class Stripe {
   }
 
   create() {
+    console.log(this)
     this.square_array = createSquares(this.square_array, 50);
     return this;
   }
@@ -59,13 +60,24 @@ class Stripe {
 let layers = [];
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  let W = displayWidth;
+  let H = displayHeight;
 
-  for (let x = -800; x < 2000; x+=400) {
+
+  createCanvas(W, H);
+
+  let flag = 0;
+  for (let i = -8/16*W; i < 14/16*W; i+=100) {
     let square_array = [];
-    let speed = (Math.random() ) * 5;
-    for (let i = 0; i < 50; ++i) {
-      square_array.push(new Square(x+i*30, window.innerHeight-i*30, speed));
+    let speed = 2;
+    if (flag == 0) {
+      speed = 4;
+      flag = 1;
+    } else {
+      flag = 0;
+    }
+    for (let j = 0; j < 50; ++j) {
+      square_array.push(new Square(i+j*30, H-j*30, speed));
     }
 
     let stripe = new Stripe(square_array, speed);
@@ -73,21 +85,21 @@ function setup() {
   }
 }
 
-function createSquares(diamonds, num) {
+function createSquares(squares, num) {
   
-  while(diamonds.length < num) {
-    let l = diamonds.length;
-    let x = diamonds[l-1].x;
-    let y = diamonds[l-1].y;
-    let diamond = new Square(x + 30 , y - 30 , 1);
-    diamonds.push(diamond);
+  while(squares.length < num) {
+    let l = squares.length;
+    let i = squares[l-1].x;
+    let j = squares[l-1].y;
+    let diamond = new Square(i + 30 , j - 30 , 1);
+    squares.push(diamond);
 
-    x = diamonds[0].x;
-    y = diamonds[0].y;
-    diamond = new Square(x - 30 , y + 30 , 1);
-    diamonds.unshift(diamond);
+    i = squares[0].x;
+    j = squares[0].y;
+    diamond = new Square(i - 30 , j + 30 , 1);
+    squares.unshift(diamond);
   }
-  return diamonds;
+  return squares;
 }
 
 
