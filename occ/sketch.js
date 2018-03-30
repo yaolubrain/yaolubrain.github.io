@@ -59,14 +59,15 @@ class Stripe {
 
 let layers = [];
 
-let W = window.innerWidth;
-let H = window.innerHeight;
-
 function setup() {
+  let W = displayWidth;
+  let H = displayHeight;
+
+
   createCanvas(W, H);
 
   let flag = 0;
-  for (let i = -7/16*W; i < 15/16*W; i+=100) {
+  for (let i = -8/16*W; i < 14/16*W; i+=100) {
     let square_array = [];
     let speed = 2;
     if (flag == 0) {
