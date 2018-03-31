@@ -8,8 +8,8 @@ class Stick {
     this.direct = 1;
   }
 
-  display() {
-    strokeWeight(10);
+  display(S) {
+    strokeWeight(S/80);
     line(this.x1, this.y1, this.x2, this.y2);
   }
 
@@ -104,12 +104,12 @@ function draw() {
   translate(W/2, H/2);
 
   for (let i = 0; i < sticks.length; ++i) {
-    sticks[i].display();
+    sticks[i].display(S);
     for (let j = i - 1; j >= 0; --j) {
       let p = compute_intersection(sticks[j], sticks[i]);
       if (Math.abs(p[0]) < 0.3*S && Math.abs(p[1]) < 0.3*S) {
         fill(0);
-        ellipse(p[0], p[1], 15, 15);
+        ellipse(p[0], p[1], S/50, S/50);
       }
     }
     sticks[i].move(S);
