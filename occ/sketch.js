@@ -1,114 +1,121 @@
-class Square {
-  constructor(x, y, speed) {
-    this.x = x;
-    this.y = y;
+class Stick {
+  constructor(x1, y1, x2, y2, speed) {
+    this.x1 = x1;
+    this.y1 = y1;
+    this.x2 = x2;
+    this.y2 = y2;
     this.speed = speed;
-    this.size = 50;
+    this.direct = 1;
+  }
+
+  display(W, H) {
+    strokeWeight(10);
+    line(this.x1, this.y1, this.x2, this.y2);
   }
 
   move() {
-    this.x += this.speed;
-    this.y += -this.speed;
-    return this;
-  }
 
-  isInside() {
-    return this.x >= 0 & this.x <= displayWidth & this.y >= 0 & this.y <= displayHeight;
+    if (this.x1 == -200) {
+      if (Math.abs(this.y1) < 200 && Math.abs(this.y2) < 200) {
+        this.y1 += this.direct * this.speed;
+        this.y2 -= this.direct * this.speed;
+      }
+
+      if (Math.abs(this.y1) >= 200 || Math.abs(this.y2) >= 200) {
+        this.direct = -this.direct;
+        this.y1 += this.direct * this.speed;
+        this.y2 -= this.direct * this.speed;
+
+      }
+    }
+
+    if (this.y1 == 200) {
+      if (Math.abs(this.x1) < 200 && Math.abs(this.x2) < 200) {
+        this.x1 += this.direct * this.speed;
+        this.x2 -= this.direct * this.speed;
+      }
+
+      if (Math.abs(this.x1) >= 200 || Math.abs(this.x2) >= 200) {
+        this.direct = -this.direct;
+        this.x1 += this.direct * this.speed;
+        this.x2 -= this.direct * this.speed;
+      }
+    }
+
   }
 }
 
-class Stripe {
-  constructor(square_array, speed) {
-    this.square_array = square_array;
-    this.speed = speed;
-  }
+function compute_intersection(s1, s2) {
 
-  push(square) {
-    this.square_array.push(square);
-  }
+  let x1 = s1.x1;
+  let y1 = s1.y1;
+  let x2 = s1.x2
+  let y2 = s1.y2;
 
-  display() {
-    for (let i = this.square_array.length - 1; i >= 0; --i) {
-      let square = this.square_array[i];
-      fill(0.25*square.y + 1);
-      rect(square.x, square.y, square.size, square.size);
-    }
-    return this;
-  }
+  let x3 = s2.x1;
+  let y3 = s2.y1;
+  let x4 = s2.x2;
+  let y4 = s2.y2;
 
-  move() {
-    for (let i = 0; i < this.square_array.length; ++i) {
-      let square = this.square_array[i];
-      square.x += this.speed;
-      square.y += -this.speed;
-    }
-    return this;
-  }
+  let x = ((x1*y2-y1*x2)*(x3-x4) - (x3*y4-y3*x4)*(x1-x2)) / ((x1-x2)*(y3-y4) - (x3-x4)*(y1-y2));
+  let y = ((x1*y2-y1*x2)*(y3-y4) - (x3*y4-y3*x4)*(y1-y2)) / ((x1-x2)*(y3-y4) - (x3-x4)*(y1-y2));
 
-  remove() {
-    this.square_array = this.square_array.filter(dot => dot.isInside());
-    return this;
-  }
-
-  create() {
-    console.log(this)
-    this.square_array = createSquares(this.square_array, 50);
-    return this;
-  }
+  return [x, y];
 }
 
-let layers = [];
+
+let sticks = [];
 
 function setup() {
-  let W = displayWidth;
-  let H = displayHeight;
-
-
+  let W = window.innerWidth;
+  let H = window.innerHeight;
   createCanvas(W, H);
+  background(155);
 
-  let flag = 0;
-  for (let i = -8/16*W; i < 14/16*W; i+=100) {
-    let square_array = [];
-    let speed = 2;
-    if (flag == 0) {
-      speed = 4;
-      flag = 1;
-    } else {
-      flag = 0;
-    }
-    for (let j = 0; j < 50; ++j) {
-      square_array.push(new Square(i+j*30, H-j*30, speed));
-    }
-
-    let stripe = new Stripe(square_array, speed);
-    layers.push(stripe)
+  for (let i = 0; i < 3; ++i) {
+    let x1 = random(-200, 200);
+    let y1 = 200;
+    let x2 = random(-200, 200);
+    let y2 = -200;
+    let speed = random(-2, 2);
+    let stick = new Stick(x1, y1, x2, y2, speed);
+    sticks.push(stick);
   }
-}
 
-function createSquares(squares, num) {
-  
-  while(squares.length < num) {
-    let l = squares.length;
-    let i = squares[l-1].x;
-    let j = squares[l-1].y;
-    let diamond = new Square(i + 30 , j - 30 , 1);
-    squares.push(diamond);
-
-    i = squares[0].x;
-    j = squares[0].y;
-    diamond = new Square(i - 30 , j + 30 , 1);
-    squares.unshift(diamond);
+  for (let i = 0; i < 3; ++i) {
+    let x1 = -200;
+    let y1 = random(-200, 200);
+    let x2 = 200;
+    let y2 = random(-200, 200);
+    let speed = random(-2, 2);
+    let stick = new Stick(x1, y1, x2, y2, speed);
+    sticks.push(stick);
   }
-  return squares;
+
 }
 
 
 function draw() {
-  background(0);
-  noStroke();
+  background(155);
+  let W = window.innerWidth;
+  let H = window.innerHeight;
 
-  for (let i = 0; i < layers.length; ++i) {
-    let stripe = layers[i];
-    stripe.display().move().remove().create();
+  for (let i = 0; i < sticks.length; ++i) {
+    push();
+    translate(W/2, H/2);
+
+    sticks[i].display(W, H);
+  
+    for (let j = i - 1; j >= 0; --j) {
+      let p = compute_intersection(sticks[j], sticks[i]);
+      if (Math.abs(p[0]) < 200 && Math.abs(p[1]) < 200) {
+        fill(0);
+        ellipse(p[0], p[1], 15, 15);
+      }
+    }
+    pop();
+    
+
+    sticks[i].move();
   }
 }
