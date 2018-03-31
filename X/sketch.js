@@ -103,6 +103,12 @@ function draw() {
   push();
   translate(W/2, H/2);
 
+  strokeWeight(S/80);
+  line(-0.3*S, -0.3*S, -0.3*S, 0.3*S);
+  line(-0.3*S, -0.3*S, 0.3*S, -0.3*S);
+  line(0.3*S, 0.3*S, -0.3*S, 0.3*S);
+  line(0.3*S, 0.3*S, 0.3*S, -0.3*S);
+
   for (let i = 0; i < sticks.length; ++i) {
     sticks[i].display(S);
     for (let j = i - 1; j >= 0; --j) {
