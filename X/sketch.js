@@ -8,20 +8,19 @@ class Stick {
     this.direct = 1;
   }
 
-  display(W, H) {
+  display() {
     strokeWeight(10);
     line(this.x1, this.y1, this.x2, this.y2);
   }
 
-  move() {
-
-    if (this.x1 == -200) {
-      if (Math.abs(this.y1) < 200 && Math.abs(this.y2) < 200) {
+  move(S) {
+    if (this.x1 == -0.3*S) {
+      if (Math.abs(this.y1) < 0.3*S && Math.abs(this.y2) < 0.3*S) {
         this.y1 += this.direct * this.speed;
         this.y2 -= this.direct * this.speed;
       }
 
-      if (Math.abs(this.y1) >= 200 || Math.abs(this.y2) >= 200) {
+      if (Math.abs(this.y1) >= 0.3*S || Math.abs(this.y2) >= 0.3*S) {
         this.direct = -this.direct;
         this.y1 += this.direct * this.speed;
         this.y2 -= this.direct * this.speed;
@@ -29,13 +28,13 @@ class Stick {
       }
     }
 
-    if (this.y1 == 200) {
-      if (Math.abs(this.x1) < 200 && Math.abs(this.x2) < 200) {
+    if (this.y1 == 0.3*S) {
+      if (Math.abs(this.x1) < 0.3*S && Math.abs(this.x2) < 0.3*S) {
         this.x1 += this.direct * this.speed;
         this.x2 -= this.direct * this.speed;
       }
 
-      if (Math.abs(this.x1) >= 200 || Math.abs(this.x2) >= 200) {
+      if (Math.abs(this.x1) >= 0.3*S || Math.abs(this.x2) >= 0.3*S) {
         this.direct = -this.direct;
         this.x1 += this.direct * this.speed;
         this.x2 -= this.direct * this.speed;
@@ -69,24 +68,25 @@ let sticks = [];
 function setup() {
   let W = window.innerWidth;
   let H = window.innerHeight;
+  let S = Math.min(W, H);
   createCanvas(W, H);
   background(155);
 
   for (let i = 0; i < 3; ++i) {
-    let x1 = random(-200, 200);
-    let y1 = 200;
-    let x2 = random(-200, 200);
-    let y2 = -200;
+    let x1 = random(-0.3*S, 0.3*S);
+    let y1 = 0.3*S;
+    let x2 = random(-0.3*S, 0.3*S);
+    let y2 = -0.3*S;
     let speed = random(-2, 2);
     let stick = new Stick(x1, y1, x2, y2, speed);
     sticks.push(stick);
   }
 
   for (let i = 0; i < 3; ++i) {
-    let x1 = -200;
-    let y1 = random(-200, 200);
-    let x2 = 200;
-    let y2 = random(-200, 200);
+    let x1 = -0.3*S;
+    let y1 = random(-0.3*S, 0.3*S);
+    let x2 = 0.3*S;
+    let y2 = random(-0.3*S, 0.3*S);
     let speed = random(-2, 2);
     let stick = new Stick(x1, y1, x2, y2, speed);
     sticks.push(stick);
@@ -99,23 +99,21 @@ function draw() {
   background(155);
   let W = window.innerWidth;
   let H = window.innerHeight;
+  let S = Math.min(W, H);
+  push();
+  translate(W/2, H/2);
 
   for (let i = 0; i < sticks.length; ++i) {
-    push();
-    translate(W/2, H/2);
-
-    sticks[i].display(W, H);
-  
+    sticks[i].display();
     for (let j = i - 1; j >= 0; --j) {
       let p = compute_intersection(sticks[j], sticks[i]);
-      if (Math.abs(p[0]) < 200 && Math.abs(p[1]) < 200) {
+      if (Math.abs(p[0]) < 0.3*S && Math.abs(p[1]) < 0.3*S) {
         fill(0);
         ellipse(p[0], p[1], 15, 15);
       }
     }
-    pop();
-    
-
-    sticks[i].move();
+    sticks[i].move(S);
   }
+
+  pop();
 }
