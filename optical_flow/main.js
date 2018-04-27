@@ -47,7 +47,10 @@ class Dot {
     }        
 
     isInside() {
-        return this.x >= 0 & this.x <= displayWidth & this.y >= 0 & this.y <= displayHeight;
+        let W = window.innerWidth;
+        let H = window.innerHeight;
+
+        return this.x >= 0 & this.x <= W & this.y >= 0 & this.y <= H;
     }
 };
 
