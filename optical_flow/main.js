@@ -65,8 +65,10 @@ function createDots(dots, dotNum, dotSizeMean, scale) {
 function setup() {
 
     randomSeed(0);
+    let W = window.innerWidth;
+    let H = window.innerHeight;
 
-    createCanvas(displayWidth, displayHeight);
+    createCanvas(W, H);
 
     createDots(dots, dotNum, 4, 1);
 
