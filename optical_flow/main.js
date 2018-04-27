@@ -52,9 +52,12 @@ class Dot {
 };
 
 function createDots(dots, dotNum, dotSizeMean, scale) {
+    let W = window.innerWidth;
+    let H = window.innerHeight;
+
     for (let i = 0; i < dotNum; i++) {
-        let x = random() * displayWidth;
-        let y = random() * displayHeight;
+        let x = random() * W;
+        let y = random() * H;
         let dotSize = dotSizeMean * (1 + scale*(random() - 0.5));
         let dot = new Dot(x, y, dotSize);
         dots.push(dot);
