@@ -147,7 +147,7 @@ function draw() {
   push();
   translate(W/2, H/2);
 
-  strokeWeight(S/80);
+  strokeWeight(S/40);
   line(-0.3*S, -0.3*S, -0.3*S, 0.3*S);
   line(-0.3*S, -0.3*S, 0.3*S, -0.3*S);
   line(0.3*S, 0.3*S, -0.3*S, 0.3*S);
@@ -155,7 +155,7 @@ function draw() {
 
   strokeWeight(100);
   for (let i = 0; i < sticks.length; ++i) {
-    sticks[i].display(S/15);
+    sticks[i].display(S/12);
   }
   pop();
 
