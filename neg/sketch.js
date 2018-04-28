@@ -120,7 +120,7 @@ function setup() {
     let y1 = 0.5*S;
     let x2 = (random() - 0.5) * 1.0 * S;
     let y2 = -0.5*S;
-    let speed = random() * 5 + 0.2;
+    let speed = random() * 5 + 0.5;
     let stick = new Stick(x1, y1, x2, y2, speed, 0.5*S);
     sticks.push(stick);
   }
@@ -130,7 +130,7 @@ function setup() {
     let y1 = (random() - 0.5) * 1.0 * S;
     let x2 = 0.5*S;
     let y2 = (random() - 0.5) * 1.0 * S;
-    let speed = random() * 8 + 0.4;
+    let speed = random() * 8 + 0.8;
     let stick = new Stick(x1, y1, x2, y2, speed, 0.5*S);
     sticks.push(stick);
   }
