@@ -172,7 +172,7 @@ function draw() {
   noStroke();
   fill(255);
   rect(0, 0, W, H/2-0.3*S);
-  rect(0, H - 0.2*S, W, H/2-0.3*S);
+  rect(0, H/2 + 0.3*S, W, H);
   rect(0, 0, W/2-0.3*S, H);
   rect(W/2 + 0.3*S, 0, W/2-0.3*S, H);
   pop();
