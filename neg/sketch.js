@@ -125,7 +125,7 @@ function setup() {
     sticks.push(stick);
   }
 
-  for (let i = 0; i < 5; ++i) {
+  for (let i = 0; i < n; ++i) {
     let x1 = -0.5*S;
     let y1 = (random() - 0.5) * 1.0 * S;
     let x2 = 0.5*S;
