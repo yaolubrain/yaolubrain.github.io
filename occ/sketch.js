@@ -74,8 +74,16 @@ class Stick {
   }
 
   display(S) {
-    strokeWeight(S/80);
-    line(this.p1.x, this.p1.y, this.p2.x, this.p2.y);
+    strokeWeight(S/50);
+    if (this.p1.x == -S || this.p1.y == S) {
+      push();
+      translate(this.p1.x, this.p1.y);
+      fill(255);
+      let a = atan2(this.p2.y - this.p1.y, this.p2.x - this.p1.x)
+      rotate(a);
+      rect(0, 0, 900, 50);
+      pop();
+    }
     return this;
   }
 
@@ -113,28 +121,26 @@ function setup() {
   let H = window.innerHeight;
   let S = Math.min(W, H);
   createCanvas(W, H);
-  background(155);
-
-  frameRate(60);
+  background(255);
 
   let n = 5;
   let d = 0.1;
 
   for (let i = 0; i < n; ++i) {
-    let x1 = d*i*S + (0.30-(n-1)*d)*S;
-    let y1 = 0.3*S;
-    let x2 = d*i*S - 0.30*S;
-    let y2 = -0.3*S;
-    let speed = 5;
+    let x1 = (random() - 0.5) * 0.6 * S;
+    let y1 = 0.5*S;
+    let x2 = (random() - 0.5) * 0.6 * S;
+    let y2 = -0.5*S;
+    let speed = 2;
     let stick = new Stick(x1, y1, x2, y2, speed, 0.3*S);
     sticks.push(stick);
   }
 
   for (let i = 0; i < 5; ++i) {
-    let x1 = -0.3*S;
-    let y1 = d*i*S + (0.30-(n-1)*d)*S;
-    let x2 = 0.3*S;
-    let y2 = d*i*S - 0.30*S;
+    let x1 = -0.5*S;
+    let y1 = (random() - 0.5) * 0.6 * S;
+    let x2 = 0.5*S;
+    let y2 = (random() - 0.5) * 0.6 * S;
     let speed = 2.5;
     let stick = new Stick(x1, y1, x2, y2, speed, 0.3*S);
     sticks.push(stick);
@@ -144,10 +150,13 @@ function setup() {
 
 
 function draw() {
-  background(155);
+  background(255);
   let W = window.innerWidth;
   let H = window.innerHeight;
   let S = Math.min(W, H);
+
+
+
   push();
   translate(W/2, H/2);
 
@@ -158,16 +167,26 @@ function draw() {
   line(0.3*S, 0.3*S, 0.3*S, -0.3*S);
 
   for (let i = 0; i < sticks.length; ++i) {
-    sticks[i].display(S);
+    sticks[i].display(0.5*S);
     for (let j = i - 1; j >= 0; --j) {
       let p = compute_intersection(sticks[j], sticks[i]);
       if (Math.abs(p[0]) < 0.29*S && Math.abs(p[1]) < 0.29*S) {
         fill(0);
-        ellipse(p[0], p[1], S/50, S/50);
+  //      ellipse(p[0], p[1], S/50, S/50);
       }
     }
-    sticks[i].move(S);
+    
   }
 
+  pop();
+
+
+  push()
+  noStroke();
+  fill(255);
+  rect(0, 0, W, H/2-0.3*S);
+  rect(0, H - 0.2*S, W, H/2-0.3*S);
+  rect(0, 0, W/2-0.3*S, H);
+  rect(W/2 + 0.3*S, 0, W/2-0.3*S, H);
   pop();
 }
