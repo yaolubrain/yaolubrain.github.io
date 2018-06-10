@@ -61,11 +61,11 @@ function setup() {
   createCanvas(W, H);
   background(255);
 
-  let n = 20;
+  let n = 30;
 
   strokeWeight(5);
   for (let i = 0; i < n; ++i) {
-    let x = random(W/2 - 500, W/2 + 200);
+    let x = random(W/2 - 800, W/2 + 500);
     let y = random(H/2 - 400, H/2 + 200);
     let len = random(100, 300);
 
