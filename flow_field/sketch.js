@@ -30,6 +30,11 @@ function draw() {
       for (let i = 0; i < psize; ++i) {
         for (let j = 0; j < psize; ++j) {
           let loc1 = (x+i + (y+j) * W) * 4;
+          img_new.pixels[loc1 + 0] = 0;
+          img_new.pixels[loc1 + 1] = 0;
+          img_new.pixels[loc1 + 2] = 0;
+          img_new.pixels[loc1 + 3] = 255;
+
 
           let x_new = x+i+i_new;
           let y_new = y+j+j_new;
