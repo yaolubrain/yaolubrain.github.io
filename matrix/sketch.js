@@ -18,9 +18,9 @@ class Square {
   display(t) {
 
     push();
-
+//    translate((this.x1+this.x3)/2, (this.y1+this.y3)/2);
+    
     translate(window.innerWidth/2, window.innerHeight/2);
-    translate((this.x1+this.x3)/2, (this.y1+this.y3)/2);
     rotate(0.1*t);
 
     let ratio = (cos(t) + 1) / 2;
@@ -50,19 +50,22 @@ let squares = [];
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
 
-  for (let i = -20; i < 20; i++) {
-    for (let j = -20; j < 20; j++) {
+  let w1 = window.innerWidth / 60;
+  let w2 = w1 + 5;
+
+  for (let i = -10; i < 10; i++) {
+    for (let j = -10; j < 10; j++) {
       let n1 = 5;
       let n2 = 5;
 
-      let x1 = i*60 + n1;
-      let y1 = j*60 + n2;
-      let x2 = i*60 + 40;
-      let y2 = j*60;
-      let x3 = i*60 + 40 - n1;
-      let y3 = j*60 + 40 - n2;
-      let x4 = i*60;
-      let y4 = j*60 + 40;
+      let x1 = i*w1 + n1;
+      let y1 = j*w1 + n2;
+      let x2 = i*w1 + w2;
+      let y2 = j*w1;
+      let x3 = i*w1 + w2 - n1;
+      let y3 = j*w1 + w2 - n2;
+      let x4 = i*w1;
+      let y4 = j*w1 + w2;
       
       if (i % 2 == 0) {      
 	squares.push(new Square(x1, y1, x2, y2, x3, y3, x4, y4));
@@ -79,11 +82,11 @@ let t = 1;
 function draw() {
   background(255);
 
-  for (let i = -20; i < 20; i++) {
-    for (let j = -20; j < 20; j++) {
-      let index = (i+20) * 40 + j + 20;
-      squares[index].move(0.05*t + 0.1*(i-j) + 0.6*(j+i));
-      squares[index].display(0.05*t + 0.1*(i-j) + 0.6*(j+i) );
+  for (let i = -10; i < 10; i++) {
+    for (let j = -10; j < 10; j++) {
+      let index = (i+10) * 20 + j + 10;
+      squares[index].move(0.05*t + 0.05*(i-j) * (j+i));
+      squares[index].display(0.05*t + 0.05*(i-j) * (j+i));
     }
   }
 
