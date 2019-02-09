@@ -50,7 +50,7 @@ let squares = [];
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
 
-  let w1 = window.innerWidth / 60;
+  let w1 = min(window.innerWidth,window.innerHeight) / 30;
   let w2 = w1 + 5;
 
   for (let i = -10; i < 10; i++) {
