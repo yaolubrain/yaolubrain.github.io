@@ -85,8 +85,8 @@ function draw() {
   for (let i = -10; i < 10; i++) {
     for (let j = -10; j < 10; j++) {
       let index = (i+10) * 20 + j + 10;
-      squares[index].move(0.05*t + 0.05*(i-j) * (j+i));
-      squares[index].display(0.05*t + 0.05*(i-j) * (j+i));
+      squares[index].move(1*cos(0.01*t) * 0.05*(i-j) * (i+j));
+      squares[index].display(1*cos(0.01*t) * 0.05*(i-j) * (i+j));
     }
   }
 
