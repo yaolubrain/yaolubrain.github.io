@@ -25,6 +25,7 @@ class Square {
 
     let ratio = (cos(t) + 1) / 2;
     if (ratio > 0.5) {
+      fill(0);
       quad(this.x1, this.y1, this.x2, this.y2, this.x3, this.y3, this.x4, this.y4);      
     } else {
       noFill();
