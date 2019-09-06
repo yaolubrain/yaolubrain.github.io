@@ -1,0 +1,7 @@
+I"<p>
+<img src="http://yaolubrain.github.io/img/zero_shot.jpg" align="left" width="200px" style="margin-right:30px" />
+We found visual attributes of object classes can be unsuperisedly learned by applying Independent Component Analysis on the softmax outputs of a trained ConvNet. We showed such attributes can be useful for object recognition by performing zero-shot learning experiments on the ImageNet dataset of over 20,000 object classes.<br />
+<a href="http://arxiv.org/abs/1506.00990">[paper]</a>
+</p>
+<div style="clear: both"></div>
+:ET
