@@ -1,212 +1,273 @@
----
-layout: default
----
-<a href="#sidebar" class="mobilemenu"><i class="icon-reorder"></i></a>
-<!-- Side Bar (Left) -->
-<div id="sidebar"> 
-    <div id="main-nav">
-        <div id="nav-container">
-            <div id="profile" class="clearfix">
-                <div class="portrate hidden-xs"></div>
-                <div class="title">
-                    <h2>Yao Lu</h2>
-                    <h3>Peking University</h3>
-                    <h3>yaolubrain@gmail.com</h3>
-                </div>                            
-            </div>
-            <ul id="navigation">
-                <li class="currentmenu">
-                    <a href="{{ "" | prepend: site.url }}">
-                        <div class="text">About Me</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ "/publications/" | prepend: site.url }}">
-                        <div class="text">Publications</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ "/projects/" | prepend: site.url }}">
-                        <div class="text">Projects</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ "/art/" | prepend: site.url }}">
-                        <div class="text">Art</div>
-                    </a>
-                </li>
-            </ul>
-        </div>        
-    </div>
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <title>Yao Lu</title>
+  
+  <meta name="author" content="Yao Lu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheet.css">
+	<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;%F0%9F%8C%90&lt;/text&gt;&lt;/svg&gt;">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Yao Lu</name>
+              </p>
+              <p>I am a Postdoc in Peking University.</p>
+              <p>
+              I got my PhD from Australian National University and Master from University of Helsinki.
+              </p>
+              <p>
+                I am interested in neural networks, optimization, machine learning and computer vision.
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:yaolubrain@gmail.com">Email</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?user=CtDjbg4AAAAJ&hl=zh-CN">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://twitter.com/yaolubrain">Twitter</a> &nbsp;/&nbsp;
+                <a href="https://github.com/yaolubrain/">Github</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a><img style="width:100%;max-width:100%" alt="profile photo" src="./assets/yao.jpg" class="hoverZoomLink"></a>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Publications</heading>            
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+				
+      		  
+          <tr>
+
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2104.02409">
+                <papertitle>Learning to Estimate Hidden Motions with Global Motion Aggregation</papertitle>
+              </a>
+              <br>
+              Shihao Jiang, Dylan Campbell, <strong>Yao Lu</strong>, Hongdong Li, Richard Hartley
+              <br>
+              <em>IEEE International Conference on Computer Vision (ICCV)</em>, 2021
+              <p>
+              We obtained the state-of-art results by integrating global motion features.
+              </p>
+            </td>
+          </tr>		
+          
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2104.02166">
+                <papertitle>Learning Optical Flow from a Few Matches</papertitle>
+              </a>
+              <br>
+              Shihao Jiang, <strong>Yao Lu</strong>, Hongdong Li, Richard Hartley
+              <br>
+              <em>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2021
+              <br>
+              <p></p>
+              <p>
+                We show that high performance optical flow estimation can be achieved without using dense cost volumes.
+              </p>
+            </td>
+          </tr>		
+
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2006.12169">
+                <papertitle>Bidirectionally Self-Normalizing Neural Networks</papertitle>
+              </a>
+              <br>
+              <strong>Yao Lu</strong>, Stephen Gould, Thalaiyasingam Ajanthan
+              <br>
+              <em>arXiv</em>, 2020
+              <br>
+              <p></p>
+              <p>
+              We theoretically solve the vanishing/exploding gradients problem in neural networks. Key idea: constrain signal norm in both directions via a new class of activation functions and orthogonal weight matrices.
+              </p>
+            </td>
+          </tr>	
+
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1802.07351">
+                <papertitle>Devon: Deformable Volume Network for Learning Optical Flow</papertitle>
+              </a>
+              <br>
+              <strong>Yao Lu</strong>, Jack Valmadre, Heng Wang, Juho Kannala, Mehrtash Harandi, Philip Torr
+              <br>
+              <em>IEEE Winter Conference on Applications of Computer Vision (WACV)</em>, 2020
+              <br>
+              <p></p>
+              <p>
+              We pointed out the problem of image warping in estimating optical flow and proposed the deformable cost volume to solve the problem.
+              </p>
+            </td>
+          </tr>	
+
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1802.07351">
+                <papertitle>Doubly Stochastic Neighbor Embedding on Spheres</papertitle>
+              </a>
+              <br>
+              <strong>Yao Lu</strong>, Jack Valmadre, Heng Wang, Juho Kannala, Mehrtash Harandi, Philip Torr
+              <br>
+              <em>Pattern Recognition Letters</em>, 2019
+              <br>
+              <p></p>
+              <p>
+              We present a new method for data visualization. See <a href="https://yaolubrain.github.io/dosnes/">project page</a>.
+              </p>
+            </td>
+          </tr>	
+
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1802.07351">
+                <papertitle>Learning Image Relations with Contrast Association Networks</papertitle>
+              </a>
+              <br>
+              <strong>Yao Lu</strong>, Zhirong Yang, Juho Kannala, Samuel Kaski
+              <br>
+              <em>International Joint Conference on Neural Networks (IJCNN)</em>, 2019
+              <br>
+              <p></p>
+              <p>
+              We proposed a new neural network module, Contrast Association Units, to model the relations between two sets of input variables.
+              </p>
+            </td>
+          </tr>	
+
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1804.05484">
+                <papertitle>Block Mean Approximation for Efficient Second Order Optimization</papertitle>
+              </a>
+              <br>
+              <strong>Yao Lu</strong>, Mehrtash Harandi, Richard Hartley, Razvan Pascanu
+              <br>
+              <em>ICML workshop on Modern Trends in Nonconvex Optimization for Machine Learning</em>, 2018
+              <br>
+              <p></p>
+              <p>
+              We proposed a new matrix approximation method which allows efficient matrix inversion. We then applied the method to second order optimization algorithms for training neural networks.
+              </p>
+            </td>
+          </tr>	
+
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://eprint.iacr.org/2017/452.pdf">
+                <papertitle>Oblivious Neural Network Predictions via MiniONN Transformations</papertitle>
+              </a>
+              <br>
+              Jian Liu, Mika Juuti, <strong>Yao Lu</strong>, N. Asokan
+              <br>
+              <em>ACM Conference on Computer and Communications Security (CCS)</em>, 2017
+              <br>
+              <p></p>
+              <p>
+              We proposed a new method for privacy-preserving predictions with trained neural networks.
+              </p>
+            </td>
+          </tr>	
+				
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1506.00990">
+                <papertitle>Unsupervised Learning on Neural Network Outputs</papertitle>
+              </a>
+              <br>
+              <strong>Yao Lu</strong>
+              <br>
+              <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2016
+              <br>
+              <p></p>
+              <p>
+              We found visual attributes of object classes can be unsuperisedly learned by applying Independent Component Analysis on the softmax outputs of a trained ConvNet. We showed such attributes can be useful for object recognition by performing zero-shot learning experiments on the ImageNet dataset of over 20,000 object classes.
+              </p>
+            </td>
+          </tr>	
+
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/1207.1114">
+                <papertitle>A Fast Projected Fixed-Point Algorithm for Large Graph Matching</papertitle>
+              </a>
+              <br>
+              <strong>Yao Lu</strong>, Kaizhu Huang, Cheng-Lin Liu
+              <br>
+              <em>Pattern Recognition</em>, 2016
+              <br>
+              <p></p>
+              <p>
+              We designed a fast graph matching algorithm with time complexity <i>O</i>(<i>n^3</i>) per iteration, where <i>n</i> is the size of a graph. We proved its convergence rate. It takes within 10 seconds to match two graphs of 1000 nodes on a PC.
+              </p>
+            </td>
+          </tr>	
+	
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://link.springer.com/chapter/10.1007%2F978-3-642-38221-5_17">
+                <papertitle>An Algorithm for Maximum Common Subgraph of Planar Triangulation Graphs</papertitle>
+              </a>
+              <br>
+              <strong>Yao Lu</strong>, Horst Bunke, Cheng-Lin Liu
+              <br>
+              <em>Graph-Based Representations in Pattern Recognition (GbR)</em>, 2013
+              <br>
+              <p></p>
+              <p>
+              We designed a fast Maximum Common Subgraph (MCS) algorithm for Planar Triangulation Graphs. Its time complexity is <i>O</i>(<i>mnk</i>), where <i>n</i> is the size of one graph, <i>m</i> is the size of the other graph and <i>k</i> is the size of their MCS.
+              </p>
+            </td>
+          </tr>	
+
+          <tr>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://link.springer.com/chapter/10.1007%2F978-3-642-38221-5_17">
+                <papertitle>Traveling Bumps and Their Collisions in a Two-Dimensional Neural Field</papertitle>
+              </a>
+              <br>
+              <strong>Yao Lu</strong>, Yuzuru Sato, Shun-ichi Amari
+              <br>
+              <em>Neural Computation</em>, 2011
+              <br>
+              <p></p>
+              <p>
+              We found a unique traveling bump solution, which was unknown to exist before, in a set of two-dimensional neural network equations.
+              </p>
+            </td>
+          </tr>	
+
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                Site template from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </tbody></table>
 
 
 
-</div>
-
-<div id="main">
-    <div id="biography" class="page home" data-pos="home">
-    <div class="pageheader">
-        <div class="headercontent">
-            <div class="section-container">                               
-                <div class="row">
-                    <div class="col-md-8">
-                      <p>I am a researcher in machine learning and computer vision.</p>
-                      <p>I am trying to make neural networks learn faster.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="subtitle text-center">
-                            <h3>Research Interests</h3>
-                        </div>
-                        <ul class="ul-boxed list-unstyled">
-                            <li>Neural Networks</li>
-                            <li>Numerical Optimization</li>
-                            <li>Computer Vision</li>
-                        </ul>
-                    </div>
-                </div>                
-            </div>        
-        </div>
-    </div>
-
-    <div class="pagecontents">
-        <div class="section color-2">
-            <div class="section-container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="title text-center">
-                            <h3>Education</h3>
-                        </div>
-                        <ul class="timeline">
-                            <li class="open">
-                                <div class="date">2017.07 - 2021.07</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">PhD in Computer Science, Australian National University</div>
-                                    <div class="text row">                                        
-                                        <div class="col-md-10">
-                                            Supervisors: Richard Hartley, Hongdong Li and Mehrtash Harandi
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date">2013.09 - 2016.02</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">Master in Computer Science, University of Helsinki</div>
-                                    <div class="text row">                                        
-                                        <div class="col-md-10">
-                                            Supervisors: Aapo Hyvarinen and Michael Gutmann
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="section-container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="title text-center">
-                            <h3>Study/Work Experience</h3>
-                        </div>
-                        <ul class="timeline">
-                            <li>
-                                <div class="date">2021.10 - now</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">Postdoc @ Peking University</div>
-                                    <div class="text row">                                        
-                                        <div class="col-md-10">
-                                            Supervisor: Si Wu
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date">2018.06 - 2018.11</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">Visiting Student @ University of Freiburg</div>
-                                    <div class="text row">                                        
-                                        <div class="col-md-10">
-                                            Supervisor: Thomas Brox
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date">2017.04 - 2017.07</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">Intern @ University of Oxford</div>
-                                    <div class="text row">                                        
-                                        <div class="col-md-10">
-                                            Supervisor: Philip Torr
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date">2015.09 - 2017.07</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">Research Assistant @ Aalto University</div>
-                                    <div class="text row">                                        
-                                        <div class="col-md-10">
-                                            Supervisors: Tapani Raiko and Juho Kannala
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date">2014.04 - 2014.05</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">Student Attendant @ Machine Learning Summer School, Iceland</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date">2010.12 - 2013.08</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">Research Assistant @ National Lab of Pattern Recognition, Chinese Academy of Sciences</div>
-                                    <div class="text row">                                        
-                                        <div class="col-md-10">
-                                            Supervisors: Cheng-Lin Liu and Kaizhu Huang 
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date">2009.07 - 2009.08</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">Intern @ RIKEN Brain Science Institute</div>
-                                    <div class="text row">                                        
-                                        <div class="col-md-10">
-                                            Supervisors: Shun-ichi Amari and Yuzuru Sato
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date">2008.10 - 2009.03</div>
-                                <div class="circle"></div>
-                                <div class="data">
-                                    <div class="subject">Intern @ Institute of Neuroscience, Chinese Academy of Science</div>
-                                    <div class="text row">                                        
-                                        <div class="col-md-10">
-                                            Supervisor: Si Wu 
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>                                                
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>            
-    </div>
-</div>
+</body></html>
