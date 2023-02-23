@@ -6,7 +6,7 @@ sass:
 
 markdown: kramdown
 
-url: http://yaolubrain.github.io
+url: https://yaolubrain.github.io
 permalink: /:year/:month/:title/
 owner:
     name: #
