@@ -1,7 +1,0 @@
-I"ò<p>
-	<img src="http://yaolubrain.github.io/img/MCS.png" align="left" width="200px" style="margin-right:30px" />
-	We designed a fast Maximum Common Subgraph (MCS) algorithm for Planar Triangulation Graphs. Its time complexity is <i>O</i>(<i>mnk</i>), where <i>n</i> is the size of one graph, <i>m</i> is the size of the other graph and <i>k</i> is the size of their MCS.<br />
-<a href="http://link.springer.com/chapter/10.1007%2F978-3-642-38221-5_17">[paper]</a>
-</p>
-<div style="clear:both"></div>
-:ET
