@@ -35,8 +35,8 @@ tr,
 p,
 a {
   font-family: 'Computer Modern Sans';
-  font-size: 14px
-  /* word-spacing: 0px; */
+  font-size: 14px;
+  word-spacing: -2px;
 }
 
 strong {
