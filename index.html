@@ -1,412 +1,342 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="UTF-8">
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-      }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
-  <title>Yao Lu</title>
-
-  <link rel="stylesheet" href="fonts/Sans/cmun-sans.css"></link>
-  
-  <meta name="author" content="Yao Lu">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="./assets/stylesheet.css">
-	<link rel="icon" href="./assets/brain.jpg">
+  <meta name="description" content="Yao Lu's research, publications, and projects in neural networks and machine learning.">
+  <title>Yao Lu — Researcher</title>
+  <link rel="icon" href="assets/brain.jpg">
+  <link rel="stylesheet" href="assets/home.css">
 </head>
-
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Yao Lu</name>
-              </p>
-              <p style="font-size: 15px;word-spacing:0">I am a researcher at Pengcheng Laboratory. Previously, I did my Postdoc at Peking University.</p>
-              <p style="font-size: 15px;word-spacing:0">
-              I got my PhD from Australian National University and Master from University of Helsinki, both in computer science.
-              </p>
-              <p style="font-size: 15px;word-spacing:0">
-              My research interest is neural networks, including their theory, architectures and learning algorithms.
-              </p>
-              <p style="text-align:center">
-                <a href="mailto:yaolubrain@gmail.com">Email</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?user=CtDjbg4AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://twitter.com/yaolubrain">Twitter</a> &nbsp;/&nbsp;
-                <a href="https://github.com/yaolubrain">Github</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a><img style="width:100%;max-width:100%" alt="profile photo" src="./assets/yao.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Publications</heading>            
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <div class="site-shell">
+    <main id="top">
+      <section class="hero" id="about" aria-labelledby="hero-title">
+        <div class="portrait-wrap"><img class="portrait" src="assets/yao.jpg" alt="Portrait of Yao Lu" width="320" height="320"></div>
+        <div class="hero-copy">
+          <h1 class="brand">Yao Lu</h1>
+          <h2 class="hero-intro" id="hero-title">I am a researcher at Pengcheng Laboratory. I am mostly interested in large-scale training of neural networks. I earned my PhD in computer science from the Australian National University and my master's degree in computer science from the University of Helsinki.</h2>
+          <div class="social-links" aria-label="Contact and profiles">
+            <a href="mailto:yaolubrain@gmail.com">Email</a>
+            <a href="https://scholar.google.com/citations?user=CtDjbg4AAAAJ">Google Scholar</a>
+            <a href="https://twitter.com/yaolubrain">Twitter</a>
+            <a href="https://github.com/yaolubrain">GitHub</a>
+          </div>
+        </div>
+      </section>
 
-		<tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>PowerStep: Memory-Efficient Adaptive Optimization via $\ell_p$-Norm Steepest Descent</papertitle>              
-              <br>
-              Yao Lu, Dengdong Fan, Shixun Zhang, Yonghong Tian
-              <br>
-              <em>arXiv</em>, 2026
-              <br>                       
-              <a href="https://arxiv.org/abs/2605.10335v1">[paper]</a>       
-              <a href="https://github.com/yaolubrain/PowerStep">[code]</a>       
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/powerstep.png' width="200"></div>
-                <div class="text">We propose PowerStep, a memory-efficient optimizer that achieves coordinate-wise adaptivity without storing second-moment statistics. Across Transformer models from 124M to 235B parameters, PowerStep matches Adam's convergence speed while reducing optimizer memory by half—and by roughly $8\times$ with int8 quantization.</div>
-              </div>                 
-            </td>
-        </tr>	
-			
-		<tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>PCL-Reasoner-V1.5: Advancing Math Reasoning with Offline Reinforcement Learning</papertitle>              
-              <br>
-              Yao Lu*, Dengdong Fan*, Jianzheng Nie*, Fan Xu, Jie Chen, Bin Zhou, Yonghong Tian (*equal contrubtion)
-              <br>
-              <em>arXiv</em>, 2026
-              <br>                       
-              <a href="https://arxiv.org/abs/2601.14716">[paper]</a>       
-              <a href="https://github.com/PCL-Reasoner/V1.5">[code]</a>       
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/RL.png' width="200"></div>
-                <div class="text"> We show superior results for reasoning LLMs can be achieved with offline RL, which is much more stable and efficient than online RL methods such as GRPO. All experiments were conducted on Huawei Ascend 910C NPUs.</div>
-              </div>                 
-            </td>
-          </tr>	
+      <section class="content-section" id="selected-publications" aria-labelledby="selected-title">
+        <div class="section-heading">
+          <h2 id="selected-title">Selected Publications</h2>
+        </div>
+        <div class="featured-list">
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/powerstep.png" alt="PowerStep optimization algorithm" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/2605.10335v1">Paper</a> <a href="https://github.com/yaolubrain/PowerStep">Code</a></div><h3>PowerStep: Memory-Efficient Adaptive Optimization via ℓ<sub>p</sub>-Norm Steepest Descent</h3></div>
+            <p class="paper-authors">Yao Lu, Dengdong Fan, Shixun Zhang, Yonghong Tian</p>
+            <p class="paper-venue"><em>arXiv</em>, 2026</p>
+            <p class="paper-summary">We propose PowerStep, a memory-efficient optimizer that achieves coordinate-wise adaptivity without storing second-moment statistics. Across Transformer models from 124M to 235B parameters, PowerStep matches Adam's convergence speed while reducing optimizer memory by half—and by roughly 8× with int8 quantization.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/RL.png" alt="Comparison of online and offline reinforcement learning" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/2601.14716">Paper</a> <a href="https://github.com/PCL-Reasoner/V1.5">Code</a></div><h3>PCL-Reasoner-V1.5: Advancing Math Reasoning with Offline Reinforcement Learning</h3></div>
+            <p class="paper-authors">Yao Lu*, Dengdong Fan*, Jianzheng Nie*, Fan Xu, Jie Chen, Bin Zhou, Yonghong Tian (*equal contribution)</p>
+            <p class="paper-venue"><em>arXiv</em>, 2026</p>
+            <p class="paper-summary">We show superior results for reasoning LLMs can be achieved with offline RL, which is much more stable and efficient than online RL methods such as GRPO. All experiments were conducted on Huawei Ascend 910C NPUs.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/hhn.png" alt="Illustration for Learning Sequence Attractors in Recurrent Networks with Hidden Neurons" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/2404.02729">Paper</a> <a href="assets/seq_attractor_code.zip">Code</a></div><h3>Learning Sequence Attractors in Recurrent Networks with Hidden Neurons</h3></div>
+            <p class="paper-authors">Yao Lu, Si Wu</p>
+<p class="paper-venue"><em>Neural Networks</em>, 2024</p>
+            <p class="paper-summary">We pointed out the problem of recurrent networks of only visible binary neurons in generating sequences and solved it by adding hidden neurons. A three-factor learning algorithm with theoretical guarantees is proposed to learn sequences as attractors for the networks with hidden neurons.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/bsnn.png" alt="Illustration for Bidirectionally Self-Normalizing Neural Networks" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/2006.12169">Paper</a> <a href="assets/bsnn.zip">Code</a> <a href="assets/bsnn_slides.pdf">Slides</a></div><h3>Bidirectionally Self-Normalizing Neural Networks</h3></div>
+            <p class="paper-authors">Yao Lu, Stephen Gould, Thalaiyasingam Ajanthan</p>
+<p class="paper-venue"><em>Neural Networks</em>, 2023</p>
+            <p class="paper-summary">We theoretically solve the vanishing/exploding gradients problem in feedforward neural networks. Key idea: constraining signal propagation in both directions via a new class of activation functions and orthogonal weight matrices based on high-dimensional probability theory.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/dcv.png" alt="Illustration for Devon: Deformable Volume Network for Learning Optical Flow" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/1802.07351">Paper</a> <a href="assets/devon.zip">Code</a> <a href="assets/devon_slides.pdf">Slides</a></div><h3>Devon: Deformable Volume Network for Learning Optical Flow</h3></div>
+            <p class="paper-authors">Yao Lu, Jack Valmadre, Heng Wang, Juho Kannala, Mehrtash Harandi, Philip Torr</p>
+<p class="paper-venue"><em>IEEE Winter Conference on Applications of Computer Vision</em> (WACV), 2020</p>
+            <p class="paper-summary">We pointed out the problem of image warping in estimating optical flow and proposed the deformable cost volume to solve the problem.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/dosnes.png" alt="Illustration for Doubly Stochastic Neighbor Embedding on Spheres" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/1609.01977">Paper</a> <a href="https://github.com/yaolubrain/DOSNES">Code</a> <a href="https://yaolubrain.github.io/dosnes/">Demo</a></div><h3>Doubly Stochastic Neighbor Embedding on Spheres</h3></div>
+            <p class="paper-authors">Yao Lu, Jukka Corander, Zhirong Yang</p>
+<p class="paper-venue"><em>Pattern Recognition Letters</em>, 2019</p>
+            <p class="paper-summary">We proposed a new method for data visualization, making it on spheres!</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/cau.png" alt="Illustration for Learning Image Relations with Contrast Association Networks" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/1705.05665">Paper</a> <a href="assets/can.zip">Code</a> <a href="assets/can_slides.pdf">Slides</a></div><h3>Learning Image Relations with Contrast Association Networks</h3></div>
+            <p class="paper-authors">Yao Lu, Zhirong Yang, Juho Kannala, Samuel Kaski</p>
+<p class="paper-venue"><em>International Joint Conference on Neural Networks</em> (IJCNN), 2019</p>
+            <p class="paper-summary">We proposed a new neural network module, Contrast Association Units, to model the relations between two sets of input variables.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/bma.png" alt="Illustration for Block Mean Approximation for Efficient Second Order Optimization" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/1804.05484">Paper</a> <a href="assets/bma_code.zip">Code</a> <a href="assets/bma_slides.pdf">Slides</a></div><h3>Block Mean Approximation for Efficient Second Order Optimization</h3></div>
+            <p class="paper-authors">Yao Lu, Mehrtash Harandi, Richard Hartley, Razvan Pascanu</p>
+<p class="paper-venue"><em>ICML workshop on Modern Trends in Nonconvex Optimization for Machine Learning</em>, 2018</p>
+            <p class="paper-summary">We proposed a new matrix approximation method which allows efficient matrix inversion. We then applied the method to second order optimization algorithms for training neural networks.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/zero_shot.jpg" alt="Illustration for Unsupervised Learning on Neural Network Outputs: With Application in Zero-shot Learning" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/1506.00990">Paper</a> <a href="https://github.com/yaolubrain/ULNNO">Code</a></div><h3>Unsupervised Learning on Neural Network Outputs: With Application in Zero-shot Learning</h3></div>
+            <p class="paper-authors">Yao Lu</p>
+<p class="paper-venue"><em>International Joint Conference on Artificial Intelligence</em> (IJCAI), 2016</p>
+            <p class="paper-summary">We found visual attributes of object classes can be unsuperisedly learned by applying Independent Component Analysis on the softmax outputs of a trained ConvNet. We showed such attributes can be useful for object recognition by performing zero-shot learning experiments on the ImageNet dataset of over 20,000 object classes.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/graph_matching.png" alt="Illustration for A Fast Projected Fixed-Point Algorithm for Large Graph Matching" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="https://arxiv.org/abs/1207.1114">Paper</a> <a href="assets/dspfp.zip">Code</a></div><h3>A Fast Projected Fixed-Point Algorithm for Large Graph Matching</h3></div>
+            <p class="paper-authors">Yao Lu, Kaizhu Huang, Cheng-Lin Liu</p>
+<p class="paper-venue"><em>Pattern Recognition</em>, 2016</p>
+            <p class="paper-summary">We designed a fast graph matching algorithm with time complexity <i>O</i>(n^3) per iteration, where n is the size of a graph. We proved its convergence rate. It takes within 10 seconds to match two graphs of 1,000 nodes on a PC.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/MCS.png" alt="Illustration for An Algorithm for Maximum Common Subgraph of Planar Triangulation Graphs" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="assets/MCS.pdf">Paper</a> <a href="assets/MCS.zip">Code</a></div><h3>An Algorithm for Maximum Common Subgraph of Planar Triangulation Graphs</h3></div>
+            <p class="paper-authors">Yao Lu, Horst Bunke, Cheng-Lin Liu</p>
+<p class="paper-venue"><em>Graph-Based Representations in Pattern Recognition</em> (GbR), 2013</p>
+            <p class="paper-summary">We designed a fast Maximum Common Subgraph (MCS) algorithm for Planar Triangulation Graphs. Its time complexity is <i>O</i>(mnk), where n is the size of one graph, m is the size of the other graph and k is the size of their MCS.</p>
+          </div>
+        </article>
+<article class="featured-paper">
+          <div class="paper-art"><img src="img/traveling_bumps.png" alt="Illustration for Traveling Bumps and Their Collisions in a Two-Dimensional Neural Field" loading="lazy"></div>
+          <div class="paper-content">
+            <div class="paper-heading"><div class="paper-links"><a href="assets/traveling_bumps.pdf">Paper</a> <a href="assets/traveling_bumps.zip">Code</a></div><h3>Traveling Bumps and Their Collisions in a Two-Dimensional Neural Field</h3></div>
+            <p class="paper-authors">Yao Lu, Yuzuru Sato, Shun-ichi Amari</p>
+<p class="paper-venue"><em>Neural Computation</em>, 2011</p>
+            <p class="paper-summary">We found a unique traveling bump solution, which was unknown to exist before, in a set of two-dimensional neural network equations.</p>
+          </div>
+        </article>
+        </div>
+      </section>
 
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>Learning Sequence Attractors in Recurrent Networks with Hidden Neurons</papertitle>              
-              <br>
-              Yao Lu, Si Wu
-              <br>
-              <em>Neural Networks</em>, 2024 
-              <br>                       
-              <a href="https://arxiv.org/abs/2404.02729">[paper]</a>       
-              <a href="assets/seq_attractor_code.zip">[code]</a>       
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/hhn.png' width="200"></div>
-                <div class="text">We pointed out the problem of recurrent networks of only visible binary neurons in generating sequences 
-                                  and solved it by adding hidden neurons. A three-factor learning algorithm with theoretical guarantees 
-                                  is proposed to learn sequences as attractors for the networks with hidden neurons.</div>
-              </div>                 
-            </td>
-          </tr>	
+      <section class="content-section" id="publications" aria-labelledby="publications-title">
+        <div class="section-heading">
+          <h2 id="publications-title">Full Publications</h2>
+        </div>
+        <div class="publication-list">
+<article class="publication">
+          <div>
+            <h3>The Devil is in the Spectrum: Mitigating Representation Collapse in LLMs via Topologically Regularized Side-Path</h3>
+            <p class="paper-authors">Yiheng Tao, Kaiwen Cheng, Yao Lu, Chang Liu, Jie Chen</p>
+            <p class="paper-venue"><em>International Conference on Machine Learning</em> (ICML), 2026</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2607.20484">Paper</a>
+<a href="https://github.com/Eziotao-tyd/TRSP">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>PowerStep: Memory-Efficient Adaptive Optimization via ℓ<sub>p</sub>-Norm Steepest Descent</h3>
+            <p class="paper-authors">Yao Lu, Dengdong Fan, Shixun Zhang, Yonghong Tian</p>
+            <p class="paper-venue"><em>arXiv</em>, 2026</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2605.10335v1">Paper</a>
+<a href="https://github.com/yaolubrain/PowerStep">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>MuonEq: Balancing Before Orthogonalization with Lightweight Equilibration</h3>
+            <p class="paper-authors">Da Chang, Qiankun Shi, Lvgang Zhang, Yu Li, Ruijie Zhang, Yao Lu, Yongxiang Liu, Ganzhao Yuan</p>
+            <p class="paper-venue"><em>arXiv</em>, 2026</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2603.28254">Paper</a>
+<a href="https://github.com/MaeChd/muon-eq">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>PCL-Reasoner-V1.5: Advancing Math Reasoning with Offline Reinforcement Learning</h3>
+            <p class="paper-authors">Yao Lu*, Dengdong Fan*, Jianzheng Nie*, Fan Xu, Jie Chen, Bin Zhou, Yonghong Tian (*equal contribution)</p>
+            <p class="paper-venue"><em>arXiv</em>, 2026</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2601.14716">Paper</a>
+<a href="https://github.com/PCL-Reasoner/V1.5">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>AscendKernelGen: A Systematic Study of LLM-Based Kernel Generation for Neural Processing Units</h3>
+            <p class="paper-authors">Xinzi Cao, Jianyang Zhai, Pengfei Li, Zhiheng Hu, Cen Yan, Bingxu Mu, Guanghuan Fang, Bin She, Jiayu Li, Yihan Su, Dongyang Tao, Xiansong Huang, Fan Xu, Feidiao Yang, Yao Lu, Chang-Dong Wang, Yutong Lu, Weicheng Xue, Bin Zhou, Yonghong Tian</p>
+            <p class="paper-venue"><em>arXiv</em>, 2026</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2601.07160">Paper</a>
+<a href="https://github.com/weich97/NPUKernelBench">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Learning Sequence Attractors in Recurrent Networks with Hidden Neurons</h3>
+            <p class="paper-authors">Yao Lu, Si Wu</p>
+            <p class="paper-venue"><em>Neural Networks</em>, 2024</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2404.02729">Paper</a>
+<a href="assets/seq_attractor_code.zip">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Bidirectionally Self-Normalizing Neural Networks</h3>
+            <p class="paper-authors">Yao Lu, Stephen Gould, Thalaiyasingam Ajanthan</p>
+            <p class="paper-venue"><em>Neural Networks</em>, 2023</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2006.12169">Paper</a>
+<a href="assets/bsnn.zip">Code</a>
+<a href="assets/bsnn_slides.pdf">Slides</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Learning to Estimate Hidden Motions with Global Motion Aggregation</h3>
+            <p class="paper-authors">Shihao Jiang, Dylan Campbell, Yao Lu, Hongdong Li, Richard Hartley</p>
+            <p class="paper-venue"><em>IEEE International Conference on Computer Vision</em> (ICCV), 2021</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2104.02409">Paper</a>
+<a href="https://github.com/zacjiang/GMA">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Learning Optical Flow from a Few Matches</h3>
+            <p class="paper-authors">Shihao Jiang, Yao Lu, Hongdong Li, Richard Hartley</p>
+            <p class="paper-venue"><em>IEEE Conference on Computer Vision and Pattern Recognition</em> (CVPR), 2021</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/2104.02166">Paper</a>
+<a href="https://github.com/zacjiang/SCV">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Devon: Deformable Volume Network for Learning Optical Flow</h3>
+            <p class="paper-authors">Yao Lu, Jack Valmadre, Heng Wang, Juho Kannala, Mehrtash Harandi, Philip Torr</p>
+            <p class="paper-venue"><em>IEEE Winter Conference on Applications of Computer Vision</em> (WACV), 2020</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/1802.07351">Paper</a>
+<a href="assets/devon.zip">Code</a>
+<a href="assets/devon_slides.pdf">Slides</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Doubly Stochastic Neighbor Embedding on Spheres</h3>
+            <p class="paper-authors">Yao Lu, Jukka Corander, Zhirong Yang</p>
+            <p class="paper-venue"><em>Pattern Recognition Letters</em>, 2019</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/1609.01977">Paper</a>
+<a href="https://github.com/yaolubrain/DOSNES">Code</a>
+<a href="https://yaolubrain.github.io/dosnes/">Demo</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Learning Image Relations with Contrast Association Networks</h3>
+            <p class="paper-authors">Yao Lu, Zhirong Yang, Juho Kannala, Samuel Kaski</p>
+            <p class="paper-venue"><em>International Joint Conference on Neural Networks</em> (IJCNN), 2019</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/1705.05665">Paper</a>
+<a href="assets/can.zip">Code</a>
+<a href="assets/can_slides.pdf">Slides</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Block Mean Approximation for Efficient Second Order Optimization</h3>
+            <p class="paper-authors">Yao Lu, Mehrtash Harandi, Richard Hartley, Razvan Pascanu</p>
+            <p class="paper-venue"><em>ICML workshop on Modern Trends in Nonconvex Optimization for Machine Learning</em>, 2018</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/1804.05484">Paper</a>
+<a href="assets/bma_code.zip">Code</a>
+<a href="assets/bma_slides.pdf">Slides</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Oblivious Neural Network Predictions via MiniONN Transformations</h3>
+            <p class="paper-authors">Jian Liu, Mika Juuti, Yao Lu, N. Asokan</p>
+            <p class="paper-venue"><em>ACM Conference on Computer and Communications Security</em> (CCS), 2017</p>
+          </div>
+          <div class="paper-links"><a href="https://eprint.iacr.org/2017/452.pdf">Paper</a>
+<a href="https://github.com/SSGAalto/minionn">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Unsupervised Learning on Neural Network Outputs: With Application in Zero-shot Learning</h3>
+            <p class="paper-authors">Yao Lu</p>
+            <p class="paper-venue"><em>International Joint Conference on Artificial Intelligence</em> (IJCAI), 2016</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/1506.00990">Paper</a>
+<a href="https://github.com/yaolubrain/ULNNO">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>A Fast Projected Fixed-Point Algorithm for Large Graph Matching</h3>
+            <p class="paper-authors">Yao Lu, Kaizhu Huang, Cheng-Lin Liu</p>
+            <p class="paper-venue"><em>Pattern Recognition</em>, 2016</p>
+          </div>
+          <div class="paper-links"><a href="https://arxiv.org/abs/1207.1114">Paper</a>
+<a href="assets/dspfp.zip">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>An Algorithm for Maximum Common Subgraph of Planar Triangulation Graphs</h3>
+            <p class="paper-authors">Yao Lu, Horst Bunke, Cheng-Lin Liu</p>
+            <p class="paper-venue"><em>Graph-Based Representations in Pattern Recognition</em> (GbR), 2013</p>
+          </div>
+          <div class="paper-links"><a href="assets/MCS.pdf">Paper</a>
+<a href="assets/MCS.zip">Code</a></div>
+        </article>
+<article class="publication">
+          <div>
+            <h3>Traveling Bumps and Their Collisions in a Two-Dimensional Neural Field</h3>
+            <p class="paper-authors">Yao Lu, Yuzuru Sato, Shun-ichi Amari</p>
+            <p class="paper-venue"><em>Neural Computation</em>, 2011</p>
+          </div>
+          <div class="paper-links"><a href="assets/traveling_bumps.pdf">Paper</a>
+<a href="assets/traveling_bumps.zip">Code</a></div>
+        </article>
+        </div>
+      </section>
 
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>Bidirectionally Self-Normalizing Neural Networks</papertitle>              
-              <br>
-              Yao Lu, Stephen Gould, Thalaiyasingam Ajanthan
-              <br>
-              <em>Neural Networks</em>, 2023     
-              <br>                       
-              <a href="https://arxiv.org/abs/2006.12169">[paper]</a>
-              <a href="assets/bsnn.zip">[code]</a>
-              <a href="assets/bsnn_slides.pdf">[slides]</a>
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/bsnn.png' width="200"></div>
-                <div class="text">We theoretically solve the vanishing/exploding gradients problem in feedforward neural networks. Key idea: constraining signal propagation in both directions via a new class of activation functions and orthogonal weight matrices based on high-dimensional probability theory.</div>
-              </div>                 
-            </td>
-          </tr>	
-      		  
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>Learning to Estimate Hidden Motions with Global Motion Aggregation</papertitle>              
-              <br>
-              Shihao Jiang, Dylan Campbell, Yao Lu, Hongdong Li, Richard Hartley
-              <br>
-              <em>IEEE International Conference on Computer Vision</em> (ICCV), 2021
-              <br>
-              <a href="https://arxiv.org/abs/2104.02409">[paper]</a>
-              <a href="https://github.com/zacjiang/GMA">[code]</a>              
-              <br>                 
-              <br>                           
-              <div class="container">
-                <div class="image"><img src='img/gma.png' width="200"></div>
-                <div class="text">We obtained the state-of-art optical flow estimation by integrating global motion features to handle occlusion.</div>
-              </div>                  
-            </td>
-          </tr>		
-          
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>Learning Optical Flow from a Few Matches</papertitle>              
-              <br>
-              Shihao Jiang, Yao Lu, Hongdong Li, Richard Hartley
-              <br>
-              <em>IEEE Conference on Computer Vision and Pattern Recognition</em> (CVPR), 2021
-              <br>
-              <a href="https://arxiv.org/abs/2104.02166">[paper]</a>
-              <a href="https://github.com/zacjiang/SCV">[code]</a>           
-              <br>                 
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/scv.png' width="200"></div>
-                <div class="text">We found high performance optical flow estimation can be achieved with a few candidate correspondences.</div>
-              </div>                  
-            </td>
-          </tr>		
+      <section class="content-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <h2 id="projects-title">Projects</h2>
+        </div>
+        <div class="project-grid">
+<article class="project">
+          <h3><a href="https://github.com/yaolubrain/Conv4D">4D convolution and cost volume in CUDA</a></h3>
+          <p>Yao Lu</p>
+        </article>
+<article class="project">
+          <h3><a href="https://github.com/yaolubrain/cnn_linear_max">A Simple ConvNet in 200 MATLAB lines</a></h3>
+          <p>Yao Lu</p>
+        </article>
+<article class="project">
+          <h3><a href="https://github.com/xiaohan2012/twitter-sent-dnn">Twitter Sentiment Analysis using ConvNet</a></h3>
+          <p>Han Xiao, Yao Lu</p>
+        </article>
+        </div>
+      </section>
+    </main>
 
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>Devon: Deformable Volume Network for Learning Optical Flow</papertitle>              
-              <br>
-              Yao Lu, Jack Valmadre, Heng Wang, Juho Kannala, Mehrtash Harandi, Philip Torr
-              <br>
-              <em>IEEE Winter Conference on Applications of Computer Vision</em> (WACV), 2020
-              <br>
-              <a href="https://arxiv.org/abs/1802.07351">[paper]</a>
-              <a href="assets/devon.zip">[code]</a>
-              <a href="assets/devon_slides.pdf">[slides]</a>    
-              <br>                 
-              <br>                           
-              <div class="container">
-                <div class="image"><img src='img/dcv.png' width="200"></div>
-                <div class="text">We pointed out the problem of image warping in estimating optical flow and proposed the deformable cost volume to solve the problem.</div>
-              </div>                  
-            </td>
-          </tr>	
-
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>Doubly Stochastic Neighbor Embedding on Spheres</papertitle>              
-              <br>
-              Yao Lu, Jukka Corander, Zhirong Yang
-              <br>
-              <em>Pattern Recognition Letters</em>, 2019
-              <br>
-              <a href="https://arxiv.org/abs/1609.01977">[paper]</a>
-              <a href="https://github.com/yaolubrain/DOSNES">[code]</a>
-              <a href="https://yaolubrain.github.io/dosnes/">[demo]</a>
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/dosnes.png' width="200"></div>
-                <div class="text">We proposed a new method for data visualization, making it on spheres!</div>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <papertitle>Learning Image Relations with Contrast Association Networks</papertitle>
-              <br>
-              Yao Lu, Zhirong Yang, Juho Kannala, Samuel Kaski
-              <br>
-              <em>International Joint Conference on Neural Networks</em> (IJCNN), 2019
-              <br>
-              <a href="https://arxiv.org/abs/1705.05665">[paper]</a>
-              <a href="assets/can.zip">[code]</a>     
-              <a href="assets/can_slides.pdf">[slides]</a>
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/cau.png' width="200"></div>
-                <div class="text">We proposed a new neural network module, Contrast Association Units, to model the relations between two sets of input variables.</div>
-              </div>                               
-            </td>
-          </tr>	
-
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>Block Mean Approximation for Efficient Second Order Optimization</papertitle>              
-              <br>
-              Yao Lu, Mehrtash Harandi, Richard Hartley, Razvan Pascanu
-              <br>
-              <em>ICML workshop on Modern Trends in Nonconvex Optimization for Machine Learning</em>, 2018
-              <br>
-              <a href="https://arxiv.org/abs/1804.05484">[paper]</a>
-              <a href="assets/bma_code.zip">[code]</a>
-              <a href="assets/bma_slides.pdf">[slides]</a>              
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/bma.png' width="200"></div>
-                <div class="text">We proposed a new matrix approximation method which allows efficient matrix inversion. We then applied the method to second order optimization algorithms for training neural networks.</div>
-              </div>                    
-            </td>
-          </tr>	
-
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>Oblivious Neural Network Predictions via MiniONN Transformations</papertitle>              
-              <br>
-              Jian Liu, Mika Juuti, Yao Lu, N. Asokan
-              <br>
-              <em>ACM Conference on Computer and Communications Security</em> (CCS), 2017
-              <br>
-              <a href="https://eprint.iacr.org/2017/452.pdf">[paper]</a>      
-	      <a href="https://github.com/SSGAalto/minionn">[code]</a>
-              <br>
-              <br>          
-              <div class="">              
-                <div class="text">We proposed a new method for privacy-preserving predictions with trained neural networks.</div>
-              </div>
-            </td>
-          </tr>	
-				
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">             
-              <papertitle>Unsupervised Learning on Neural Network Outputs: With Application in Zero-shot Learning</papertitle>
-              <br>
-              Yao Lu
-              <br>
-              <em>International Joint Conference on Artificial Intelligence</em> (IJCAI), 2016
-              <br>
-              <a href="https://arxiv.org/abs/1506.00990">[paper]</a>
-              <a href="https://github.com/yaolubrain/ULNNO">[code]</a>              
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/zero_shot.jpg' width="200"></div>
-                <div class="text">We found visual attributes of object classes can be unsuperisedly learned by applying Independent Component Analysis on the softmax outputs of a trained ConvNet. We showed such attributes can be useful for object recognition by performing zero-shot learning experiments on the ImageNet dataset of over 20,000 object classes.</div>
-              </div>
-            </td>
-          </tr>	
-
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>A Fast Projected Fixed-Point Algorithm for Large Graph Matching</papertitle>              
-              <br>
-              Yao Lu, Kaizhu Huang, Cheng-Lin Liu
-              <br>
-              <em>Pattern Recognition</em>, 2016
-              <br>
-              <a href="https://arxiv.org/abs/1207.1114">[paper]</a>
-              <a href="assets/dspfp.zip">[code]</a>     
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/graph_matching.png' width="200"></div>
-                <div class="text">We designed a fast graph matching algorithm with time complexity <i>O</i>(n^3) per iteration, where n is the size of a graph. We proved its convergence rate. It takes within 10 seconds to match two graphs of 1,000 nodes on a PC.</div>              
-              </div>          
-            </td>
-          </tr>	
-	
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>An Algorithm for Maximum Common Subgraph of Planar Triangulation Graphs</papertitle>              
-              <br>
-              Yao Lu, Horst Bunke, Cheng-Lin Liu
-              <br>
-              <em>Graph-Based Representations in Pattern Recognition</em> (GbR), 2013
-              <br>
-              <a href="assets/MCS.pdf">[paper]</a>
-              <a href="assets/MCS.zip">[code]</a>              
-              <br>
-              <br>
-              <div class="container">
-                <div class="image"><img src='img/MCS.png' width="200"></div>
-                <div class="text">We designed a fast Maximum Common Subgraph (MCS) algorithm for Planar Triangulation Graphs. Its time complexity is <i>O</i>(mnk), where n is the size of one graph, m is the size of the other graph and k is the size of their MCS.</div>              
-              </div>
-            </td>
-          </tr>	
-
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">              
-              <papertitle>Traveling Bumps and Their Collisions in a Two-Dimensional Neural Field</papertitle>              
-              <br>
-              Yao Lu, Yuzuru Sato, Shun-ichi Amari
-              <br>
-              <em>Neural Computation</em>, 2011
-              <br>
-              <a href="assets/traveling_bumps.pdf">[paper]</a>
-              <a href="assets/traveling_bumps.zip">[code]</a>      
-              <br>
-              <br>                      
-              <div class="container">
-                <div class="image"><img src='img/traveling_bumps.png' width="200"></div>
-                <div class="text">We found a unique traveling bump solution, which was unknown to exist before, in a set of two-dimensional neural network equations.</div>              
-            </td>
-          </tr>	
-
-        </tbody></table>
-	      
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Projects</heading>            
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-				
-           <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">             
-              <papertitle>4D Convolution and Cost Volume in CUDA</papertitle>             
-              <br>
-              Yao Lu
-              <br>
-              <a href="https://github.com/yaolubrain/Conv4D">[code]</a>             
-            </td>
-          </tr>		
-     		  
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">             
-              <papertitle>A Simple ConvNet in 200 MATLAB Lines</papertitle>             
-              <br>
-              Yao Lu
-              <br>
-              <a href="https://github.com/yaolubrain/cnn_linear_max">[code]</a>             
-            </td>
-          </tr>		
-		
-          <tr>
-            <td style="padding:20px;width:75%;vertical-align:middle">            
-              <papertitle>Twitter Sentiment Analysis with ConvNet</papertitle>              
-              <br>
-              Han Xiao, Yao Lu
-              <br><a href="https://github.com/xiaohan2012/twitter-sent-dnn">[code]</a>              
-            </td>
-          </tr>	
-        
-        </tbody></table>
-	      
-	      
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-                Site template from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </tbody></table>
-
-</body></html>
+  </div>
+</body>
+</html>
