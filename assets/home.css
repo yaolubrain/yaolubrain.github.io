@@ -34,6 +34,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Latin Modern Math";
+  src: url("../fonts/LatinModernMath/latinmodern-math.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
   font-family: "Lato Local";
   src: url("../fonts/Lato/Lato-Regular.woff2") format("woff2");
   font-style: normal;
@@ -114,7 +121,8 @@ h3 { margin-bottom: 4px; font-size: 16px; font-weight: 680; line-height: 1.38; l
 .paper-summary { margin: 8px 0 0; color: #000; font: 400 15px/1.55 "Computer Modern Sans", Arial, sans-serif; }
 .featured-paper .paper-authors, .featured-paper .paper-venue { font-size: 14px; }
 .featured-paper .paper-authors, .featured-paper .paper-venue { line-height: 1.38; }
-.featured-paper .paper-summary { margin-top: 4px; font-size: 15px; line-height: 1.45; }
+.featured-paper .paper-summary { margin-top: 4px; font-size: 15px; line-height: 1.35; }
+.math { font-family: "Latin Modern Math", "Cambria Math", serif; font-size: 1em; }
 .paper-links { display: flex; flex-wrap: wrap; gap: 5px 16px; margin-top: 8px; }
 .paper-links a { color: var(--accent); font: 700 13px/1.5 var(--sans); }
 .paper-links a:hover { opacity: .7; }
