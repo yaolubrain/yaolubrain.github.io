@@ -59,7 +59,8 @@
   --ink: #202020;
   --muted: #6c6b69;
   --line: #ebe9e6;
-  --accent: #6b5549;
+  --accent: #c62828;
+  --heading: #d00000;
   --sans: "Ubuntu", Arial, sans-serif;
 }
 
@@ -78,7 +79,7 @@ img { display: block; max-width: 100%; }
 h1, h2, h3, p { margin-top: 0; }
 .site-shell { --portrait-width: 190px; max-width: 1010px; margin: 0 auto; padding: 0 28px; }
 
-.brand { margin: 0 0 18px; white-space: nowrap; font: 700 32px/1 var(--sans); letter-spacing: -.04em; }
+.brand { margin: 0 0 18px; color: var(--heading); white-space: nowrap; font: 700 32px/1 var(--sans); letter-spacing: -.035em; }
 
 .hero {
   display: grid;
@@ -91,13 +92,13 @@ h1, h2, h3, p { margin-top: 0; }
 .hero-intro { max-width: 660px; margin-bottom: 14px; color: var(--ink); font: 400 17px/1.38 "Computer Modern Sans", Arial, sans-serif; letter-spacing: -.015em; }
 .social-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px 14px; }
 .social-links a { color: var(--accent); font-size: 15px; font-weight: 500; }
-.social-links a:hover { color: #3f3029; }
+.social-links a:hover { color: #981b1b; }
 .portrait-wrap { order: 2; width: 100%; }
 .portrait { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
 
 .content-section { scroll-margin-top: 20px; padding: 14px 0 18px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 10px; }
-h2 { margin-bottom: 0; font: 700 clamp(25px, 3vw, 29px)/1.2 "Lato Local", Lato, Arial, sans-serif; letter-spacing: -.035em; }
+h2 { margin-bottom: 0; color: var(--heading); font: 700 clamp(25px, 3vw, 29px)/1.2 var(--sans); letter-spacing: -.035em; }
 .featured-list { display: grid; gap: 0; }
 .featured-paper {
   display: grid;
@@ -110,8 +111,8 @@ h2 { margin-bottom: 0; font: 700 clamp(25px, 3vw, 29px)/1.2 "Lato Local", Lato, 
 .paper-art { display: flex; align-items: center; justify-content: center; height: 122px; overflow: hidden; }
 .paper-art img { width: 100%; max-height: 106px; object-fit: contain; }
 .paper-content { min-width: 0; }
-h3 { margin-bottom: 4px; font-size: 16px; font-weight: 680; line-height: 1.38; letter-spacing: -.022em; }
-.featured-paper h3, .publication h3 { font-family: "Lato Local", Lato, Arial, sans-serif; font-weight: 700; }
+h3 { margin-bottom: 4px; color: var(--heading); font-size: 16px; font-weight: 700; line-height: 1.38; letter-spacing: -.022em; }
+.featured-paper h3, .publication h3 { color: #000; font-family: var(--sans); }
 .paper-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 2px; }
 .paper-heading h3 { order: 1; flex: 1 1 auto; min-width: 0; margin-bottom: 0; }
 .paper-heading .paper-links { order: 2; flex: 0 0 auto; flex-wrap: nowrap; gap: 10px; margin-top: 0; white-space: nowrap; }
@@ -132,14 +133,14 @@ h3 { margin-bottom: 4px; font-size: 16px; font-weight: 680; line-height: 1.38; l
 .publication h3 { margin-bottom: 2px; font-size: 16px; }
 .publication .paper-authors, .publication .paper-venue { font-size: 14px; line-height: 1.38; }
 .publication .paper-links { flex: 0 0 auto; margin-top: 2px; }
-.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .project { display: flex; flex-direction: column; padding: 0 0 12px; border-bottom: 1px solid var(--line); }
-.project h3 { margin-bottom: 2px; font-family: "Lato Local", Lato, Arial, sans-serif; font-size: 16px; font-weight: 700; white-space: nowrap; }
+.project h3 { margin-bottom: 2px; font-family: var(--sans); font-size: 16px; font-weight: 700; white-space: nowrap; }
 .project h3 a { color: var(--accent); }
-.project h3 a:hover { color: #3f3029; }
+.project h3 a:hover { color: #981b1b; }
 .project p { margin: 0; color: var(--muted); font-size: 13px; }
 
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project:last-child { grid-column: 1 / -1; }
 }
@@ -180,6 +181,7 @@ h3 { margin-bottom: 4px; font-size: 16px; font-weight: 680; line-height: 1.38; l
   .hero-intro { font-size: 15px; }
   .portrait-wrap { margin-left: 10px; }
   h2 { font-size: 24px; }
+  .project h3 { font-size: 15px; }
   .featured-paper { grid-template-columns: 90px minmax(0, 1fr); gap: 4px 10px; }
   .paper-art { height: 76px; }
   .paper-art img { max-height: 70px; }
