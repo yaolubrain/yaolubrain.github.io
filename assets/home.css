@@ -92,13 +92,14 @@ h1, h2, h3, p { margin-top: 0; }
 .hero-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
 .hero-intro { max-width: 660px; margin-bottom: 0; color: var(--ink); font: 400 17px/1.38 "Computer Modern Sans", Arial, sans-serif; letter-spacing: -.015em; }
 .social-links { display: flex; flex-wrap: nowrap; gap: 2px; }
-.social-links a { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; color: var(--accent); border-radius: 50%; }
+.social-links a { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; color: var(--accent); border-radius: 50%; }
 .social-links a:hover { color: #981b1b; background: #fff0f0; }
-.social-links svg { display: block; width: 20px; height: 20px; }
+.social-links svg { display: block; width: 23px; height: 23px; }
 .portrait-wrap { order: 2; width: 100%; }
 .portrait { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
 
 .content-section { scroll-margin-top: 20px; padding: 14px 0 18px; }
+.hero + .content-section { padding-top: 6px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 10px; }
 h2 { margin-bottom: 0; color: var(--heading); font: 700 clamp(25px, 3vw, 29px)/1.2 var(--sans); letter-spacing: -.035em; }
 .featured-list { display: grid; gap: 0; }
@@ -159,8 +160,8 @@ h3 { margin-bottom: 4px; color: var(--heading); font-size: 16px; font-weight: 70
   .portrait-wrap { float: right; width: var(--portrait-width); margin: 0 0 8px 14px; }
   .hero-intro { font-size: 16px; }
   .hero-heading { gap: 10px; }
-  .social-links a { width: 26px; height: 26px; }
-  .social-links svg { width: 19px; height: 19px; }
+  .social-links a { width: 27px; height: 27px; }
+  .social-links svg { width: 21px; height: 21px; }
   .content-section { padding: 14px 0 20px; }
   .section-heading { align-items: start; flex-direction: column; gap: 3px; margin-bottom: 8px; }
   .featured-paper { grid-template-columns: 106px minmax(0, 1fr); gap: 4px 12px; align-items: start; padding: 10px 0; }
